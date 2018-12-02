@@ -2,8 +2,6 @@
   <b>Tutorial: how to create an Appendix document in R Markdown</b>
 </p>
 
-<center> <h2>Tutorial: how to create an Appendix document in R Markdown.</center>
-
 Read more: https://html.com/tags/center/#ixzz5YZ6XkTkC
 
 To add images, replace `tutheaderbl1.png` with the file name of any image you upload to your GitHub repository.
