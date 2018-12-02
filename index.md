@@ -107,6 +107,7 @@ The first and last lines define the beginning and end the area of text, the `{ce
  ```
 
 If you knit the document, you're going to notice that the the headings are just listed one after the other. To separate them into distinct pages (as required by formatting), add
+
 ```
 \newpage
 ```
@@ -116,7 +117,7 @@ Once this has been set up, you can create different types of Appendices in the f
 
 <a name="section4"></a>
 
-## 4. Appendix I: Sample of raw data tables.
+## 4. Appendix I: Sample of data tables.
 
 One type of Appendix could contain tables of the raw data collected, so that readers and reviewers have a better insight of the results that are summarised or only visually represented in the main body of text.
 
@@ -163,7 +164,7 @@ This is the output:
 <center><img src="https://user-images.githubusercontent.com/43357858/49344930-8eab5600-f675-11e8-8663-bf7b25f517c5.png" alt="table-pt1"></center>
 
 
-With `kableExtra` it is possible to customise the table way further. Just as an example, you can highlight one particular column or a set of columns...
+With `kableExtra` it is possible to customise the table way further. Just as an example, you can highlight one particular column or a set of columns
 
 ```puffins_t %>%
   slice(1:10) %>%
@@ -176,7 +177,7 @@ With `kableExtra` it is possible to customise the table way further. Just as an 
 
 <center><img src="https://user-images.githubusercontent.com/43357858/49344961-15603300-f676-11e8-87ce-2455d7dc83ad.png" alt="table-pt2"></center>
 
-...or make the column titles bold...
+or make the column titles bold
 
 ```
 puffins_t %>%
@@ -189,7 +190,7 @@ puffins_t %>%
 
 <center><img src="https://user-images.githubusercontent.com/43357858/49344967-2610a900-f676-11e8-8394-654478ae6aee.png" alt="table-pt3"></center>
 
-...or even create subgroups within the table.
+or even create subgroups within the table.
 
 ```
 puffins_t %>%
