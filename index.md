@@ -1,7 +1,5 @@
 # Tutorial challenge
 
-<center><img src="{{ site.baseurl }}/tutheaderbl.png" alt="Img"></center>
-
 To add images, replace `tutheaderbl1.png` with the file name of any image you upload to your GitHub repository.
 
 ### Tutorial Aims
@@ -161,10 +159,9 @@ puffins_t %>%
 
 This is the output:
 
-<center><img src="https://user-images.githubusercontent.com/43357858/49344930-8eab5600-f675-11e8-8663-bf7b25f517c5.png" alt="table-pt1"></center>
+<center><img src="https://user-images.githubusercontent.com/43357858/49345127-6b35da80-f678-11e8-88f7-680347b1afb1.png" alt="table-pt1"></center>
 
-
-With `kableExtra` it is possible to customise the table way further. Just as an example, you can highlight one particular column or a set of columns
+With `kableExtra` it is possible to customise the table way further. Just as an example, you can highlight one particular column or a set of columns,
 
 ```puffins_t %>%
   slice(1:10) %>%
@@ -177,7 +174,7 @@ With `kableExtra` it is possible to customise the table way further. Just as an 
 
 <center><img src="https://user-images.githubusercontent.com/43357858/49344961-15603300-f676-11e8-87ce-2455d7dc83ad.png" alt="table-pt2"></center>
 
-or make the column titles bold
+or make the column titles bold,
 
 ```
 puffins_t %>%
@@ -190,7 +187,7 @@ puffins_t %>%
 
 <center><img src="https://user-images.githubusercontent.com/43357858/49344967-2610a900-f676-11e8-8394-654478ae6aee.png" alt="table-pt3"></center>
 
-or even create subgroups within the table
+or even create subgroups within the table.
 
 ```
 puffins_t %>%
