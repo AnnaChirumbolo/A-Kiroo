@@ -204,7 +204,7 @@ puffins_t %>%
 <center><img src="https://user-images.githubusercontent.com/43357858/49344977-5d7f5580-f676-11e8-8993-c25d843d3db8.png" alt="table-pt4"></center>
 
 <sub>The figure does not show the whole table.</sub>
-</br>
+
 I have shown only a few of the functions offered by `kableExtra`. If you are interested in finding out more about the resources of the package, have a look at the [package manual](https://cran.r-project.org/web/packages/kableExtra/kableExtra.pdf).
 
 <a name="section5"></a>
@@ -287,17 +287,14 @@ meant_plot
 ```
 ~~~~
 
-<sub>
-'out.width' lets you decide the width of the plot in the final output file (in this case it is written in 'LaTex', as you can see from the `\\` after the value; however there is also 'HTML' syntax in which the value is written as percentage, i.e. '50%');
+<sub>'out.width' lets you decide the width of the plot in the final output file (in this case it is written in 'LaTex', as you can see from the `\\` after the value; however there is also 'HTML' syntax in which the value is written as percentage, i.e. '50%');</sub>
 
-'fig.width' and 'fig.height' define width and height of the plot, and their value needs to be numeric;
+<sub>'fig.width' and 'fig.height' define width and height of the plot, and their value needs to be numeric;</sub>
 
-'fig.show' is used to arrange the plot in a certain place.
-There are four possible values (all characters), and in this case 'hold' has been chosen because it places the plot at the very end of a code chunk.
+<sub>'fig.show' is used to arrange the plot in a certain place. There are four possible values (all characters), and in this case 'hold' has been chosen because it places the plot at the very end of a code chunk.</sub>
 </sub>
 
 This is the result in the pdf output. If you knit the document you can check it out:
-<div style="text-align:center"><img src ="/screenshots/figures-pt1.png" /></div>
 
 <center><img src="https://user-images.githubusercontent.com/43357858/49345013-dc748e00-f676-11e8-962d-9098725cf1d1.png" alt="figures-pt1"></center>
 
@@ -323,16 +320,13 @@ img_appendix<-list.files("appendix_fig/", pattern = ".png", full.names = TRUE)
 include_graphics(img_appendix)
 ```
 ~~~~
-<sub>
-'fig.align' defines the alignment of figures in the output;
-</br>
-'fig.cap' adds the figure caption at the bottom;
-</br>
-The 'list.files()' function lists the files present in a specified path. Here I chose the 'appendix_fig' folder, where all the figures to insert in the appendix had been saved;
-</br>
-The 'include_graphics()' function is part of the 'knitr' package, and it allows to embed external images in document format supported by 'knitr'.
-</sub>
+<sub>'fig.align' defines the alignment of figures in the output;</sub>
+ 
+<sub>'fig.cap' adds the figure caption at the bottom;</sub>
 
+<sub>The 'list.files()' function lists the files present in a specified path. Here I chose the 'appendix_fig' folder, where all the figures to insert in the appendix had been saved;</sub>
+
+<sub>The 'include_graphics()' function is part of the 'knitr' package, and it allows to embed external images in document format supported by 'knitr'.</sub>
 
 This is the result:
 
