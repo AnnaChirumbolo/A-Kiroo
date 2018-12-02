@@ -1,5 +1,5 @@
 <p align="center">
-  <b><h2>Tutorial: how to create an Appendix document in R Markdown</h2></b>
+  <b><big>Tutorial: how to create an Appendix document in R Markdown</big>></b>
 </p>
 
 ### Tutorial Aims
