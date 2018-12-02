@@ -171,9 +171,9 @@ puffins_t %>%
                 position = "center", font_size = 10) %>%
   column_spec(3, color = "red", bold = T)  %>% # one column
   column_spec(5:6, color = "green", bold = T) # set of columns
+```
 
 <center><img src="https://user-images.githubusercontent.com/43357858/49344961-15603300-f676-11e8-87ce-2455d7dc83ad.png" alt="table-pt2"></center>
-```
 
 or make the column titles bold,
 
