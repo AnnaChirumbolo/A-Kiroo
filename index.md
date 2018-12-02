@@ -55,7 +55,7 @@ Some general rules on formatting Appendices:
 
 In this tutorial we're going to explore how to follow these formatting rules using `Rmarkdown`. We are going to do so by exploring three different types of Appendices: for samples of raw data tables, for additional figures and for listing the code used in the main document. Finally, we are going to explore how to insert the appendix.Rmd created at the end of a mock 'main document'.
 
-To get started, download this [GitHub Repository](https://github.com/EdDataScienceEES/tutorial-assignment-AnnaChirumbolo) as zip file in your local laptop/computer.
+To get started, download this [GitHub Repository](https://github.com/AnnaChirumbolo/A_Chirumbolo) as zip file in your local laptop/computer.
 
 <a name="section3"></a>
 
