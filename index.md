@@ -364,7 +364,7 @@ Now that the Appendix document is complete, it is time to add it to the main tex
 
 There is a mock 'main_text.pdf' file in the repository. If you have a look, the only thing it is missing is the Appendix.
 
-To add the content from the 'Appendix-template.Rmd' go to the 'Appendix' section at the end of the main document, and insert the following code chunk:
+To add the content from the 'Appendix-template.Rmd' go to the 'Appendix' section at the end of the main document (the 'main_text.Rmd' file), and insert the following code chunk:
 ~~~~
 ```{r child='appendix.Rmd'}
 ```
