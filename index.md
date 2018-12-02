@@ -190,7 +190,7 @@ puffins_t %>%
 
 <center><img src="https://user-images.githubusercontent.com/43357858/49344967-2610a900-f676-11e8-8394-654478ae6aee.png" alt="table-pt3"></center>
 
-or even create subgroups within the table.
+or even create subgroups within the table
 
 ```
 puffins_t %>%
