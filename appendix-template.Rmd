@@ -2,10 +2,3 @@
 title: "Appendix-template"
 output: pdf_document
 ---
-
-
-```{r, echo = TRUE, out.width='.50\\linewidth', fig.width=25, fig.height=20, fig.show='asis', fig.align='center', fig.cap="Additional images in Appendix B"}
-library(knitr)
-img_appendix<-list.files("appendix_fig/", pattern = ".png", full.names = TRUE)
-include_graphics(img_appendix)
-```
