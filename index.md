@@ -159,9 +159,9 @@ puffins_t %>%
 ```   
 
 This is the output:
-</br>
-<img src="https://user-images.githubusercontent.com/43357858/49344930-8eab5600-f675-11e8-8663-bf7b25f517c5.png" alt="table-pt1"></center>
-</br>
+
+<center><img src="https://user-images.githubusercontent.com/43357858/49344930-8eab5600-f675-11e8-8663-bf7b25f517c5.png" alt="table-pt1"></center>
+
 
 With `kableExtra` it is possible to customise the table way further. Just as an example, you can highlight one particular column or a set of columns...
 
@@ -174,9 +174,7 @@ With `kableExtra` it is possible to customise the table way further. Just as an 
   column_spec(5:6, color = "green", bold = T) # set of columns
 ```
 
-<div style="text-align:center"><img src ="/screenshots/table-pt2.png" /></div>
-
-<center><img src="https://user-images.githubusercontent.com/43357858/49344885-d087cc80-f674-11e8-9faf-08b7ddca3e59.png" alt="template-blank"></center>
+<center><img src="https://user-images.githubusercontent.com/43357858/49344961-15603300-f676-11e8-87ce-2455d7dc83ad.png" alt="table-pt2"></center>
 
 ...or make the column titles bold...
 
@@ -189,8 +187,7 @@ puffins_t %>%
   row_spec(0, bold = T) # row '0' is the headings
 ```
 
-<div style="text-align:center"><img src ="/screenshots/table-pt3.png" /></div>
-
+<center><img src="https://user-images.githubusercontent.com/43357858/49344967-2610a900-f676-11e8-8394-654478ae6aee.png" alt="table-pt3"></center>
 
 ...or even create subgroups within the table.
 
@@ -205,8 +202,7 @@ puffins_t %>%
   group_rows("1980s", 3,10) # the remaining rows are grouped as 1980s
 ```
 
-
-<div style="text-align:center"><img src ="/screenshots/table-pt4.png" /></div>
+<center><img src="https://user-images.githubusercontent.com/43357858/49344977-5d7f5580-f676-11e8-8993-c25d843d3db8.png" alt="table-pt4"></center>
 
 <sub>The figure does not show the whole table.</sub>
 </br>
@@ -218,7 +214,7 @@ I have shown only a few of the functions offered by `kableExtra`. If you are int
 
 A second appendix that is often used contains additional figures. If you open the 'main_text.pdf' file, you can see what figures are used in the main body (the same figures are collected in the 'main_fig' folder in the [repository](https://github.com/EdDataScienceEES/tutorial-assignment-AnnaChirumbolo)). The figures show, respectively, trends in puffin populations with high and low average temperature (°C) values, and a correlation mat.
 
-<div style="text-align:center"><img src ="/screenshots/main-text-pics.png" /></div>
+<center><img src="https://user-images.githubusercontent.com/43357858/49344984-7556d980-f676-11e8-8a57-5414339d94ea.png" alt="main-text-pics"></center>
 
 Let's imagine we want to add more figures in the Appendix, for example to show the overall climate trend and averages of maximum and minimum temperature changes (°C) during that time period.
 
@@ -294,18 +290,17 @@ meant_plot
 
 <sub>
 'out.width' lets you decide the width of the plot in the final output file (in this case it is written in 'LaTex', as you can see from the `\\` after the value; however there is also 'HTML' syntax in which the value is written as percentage, i.e. '50%');
-</br>
+
 'fig.width' and 'fig.height' define width and height of the plot, and their value needs to be numeric;
-</br>
+
 'fig.show' is used to arrange the plot in a certain place.
 There are four possible values (all characters), and in this case 'hold' has been chosen because it places the plot at the very end of a code chunk.
-</br>
 </sub>
 
-</br>
-</br>
 This is the result in the pdf output. If you knit the document you can check it out:
 <div style="text-align:center"><img src ="/screenshots/figures-pt1.png" /></div>
+
+<center><img src="https://user-images.githubusercontent.com/43357858/49345013-dc748e00-f676-11e8-962d-9098725cf1d1.png" alt="figures-pt1"></center>
 
 Code chunks can be used also to insert figures that had already been saved from another script. In this case it is harder to manipulate  their dimensions - the font of the labels cannot be easily changed and there is the risk that the plot text becomes illegible. You can attempt changing the figure size as in the previous chunk, and see what happens.
 
@@ -319,7 +314,7 @@ include_graphics(img_appendix)
 
 If you knit the document, you can see that the figures become really small and the text is barely legible. Even changing the width and height of the figures doesn't make a difference in this case.  
 
-<div style="text-align:center"><img src ="/screenshots/figs-pt3.png" /></div>
+<center><img src="https://user-images.githubusercontent.com/43357858/49345018-00d06a80-f677-11e8-87f6-d8a348dd1f75.png" alt="figs-pt3"></center>
 
 When images are loaded from an external source it is advised not to align the figures, but to have them bigger and following one another.
 
@@ -338,11 +333,11 @@ The 'list.files()' function lists the files present in a specified path. Here I 
 </br>
 The 'include_graphics()' function is part of the 'knitr' package, and it allows to embed external images in document format supported by 'knitr'.
 </sub>
-</br>
-</br>
+
+
 This is the result:
-</br>
-<div style="text-align:center"><img src ="/screenshots/figures-pt2.png" /></div>
+
+<center><img src="https://user-images.githubusercontent.com/43357858/49345029-26f60a80-f677-11e8-9d71-cb6bfb43d252.png" alt="figures-pt2"></center>
 
 In this way the figures do occupy an entire page, but at least their labels are visible.
 
@@ -362,7 +357,7 @@ There is a very simple, single line of code that takes all the code used from a 
 ~~~~
 The function `purl` takes the source code from the main document (specified by the file path) and lists it within a macro code block that is not run (`eval=FALSE`).
 
-<div style="text-align:center"><img src ="/screenshots/code.png" /></div>
+<center><img src="https://user-images.githubusercontent.com/43357858/49345033-42f9ac00-f677-11e8-94c2-e0bbf94ee381.png" alt="code"></center>
 
 *Great job getting so far!*
 
