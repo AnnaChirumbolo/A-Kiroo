@@ -64,7 +64,8 @@ To get started, download this [GitHub Repository](https://github.com/EdDataScien
 ## 3. Open the R Markdown file.
 
 Open the 'appendix-template.Rmd' file. As you can see, the file is mainly empty. There is the YAML section at the top, with only this information:
-<div style="text-align:center"><img width="859" alt="template-blank" src="https://user-images.githubusercontent.com/43357858/49344885-d087cc80-f674-11e8-9faf-08b7ddca3e59.png"></div>
+
+<center><img src="https://user-images.githubusercontent.com/43357858/49344885-d087cc80-f674-11e8-9faf-08b7ddca3e59.png" alt="template-blank"></center>
 
 The output is already set to pdf. You might wish to change the title to something else than 'Appendix-template'. Also make sure you have added your name as author, by adding 'Author:' on a separate line.
 You can specify as many functions within the [YAML header](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) as you find necessary, but we're just going to leave it basic for this tutorial.
