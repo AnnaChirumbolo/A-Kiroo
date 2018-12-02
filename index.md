@@ -150,18 +150,17 @@ puffins_t <- puffins_t %>%
 
 Now the data set is ready to be inserted in a table. `kableExtra` is a very nice package to do so since it allows to use pipes (same as `Tidyverse`) to create the table.
 
-
 ```
 puffins_t %>%
   slice(1:10) %>%   # the table is going to show only the first 10 lines
   kable(digits = 2) %>%  # each value has 2 decimal digits
   kable_styling(bootstrap_options = "striped", full_width = F,
                 position = "center", font_size = 10)  # table settings with the kableExtra package
-```				
+```   
 
 This is the output:
 </br>
-<div style="text-align:center"><img src ="/screenshots/table-pt1.png" /></div>
+<img src="https://user-images.githubusercontent.com/43357858/49344930-8eab5600-f675-11e8-8663-bf7b25f517c5.png" alt="table-pt1"></center>
 </br>
 
 With `kableExtra` it is possible to customise the table way further. Just as an example, you can highlight one particular column or a set of columns...
@@ -176,6 +175,8 @@ With `kableExtra` it is possible to customise the table way further. Just as an 
 ```
 
 <div style="text-align:center"><img src ="/screenshots/table-pt2.png" /></div>
+
+<center><img src="https://user-images.githubusercontent.com/43357858/49344885-d087cc80-f674-11e8-9faf-08b7ddca3e59.png" alt="template-blank"></center>
 
 ...or make the column titles bold...
 
