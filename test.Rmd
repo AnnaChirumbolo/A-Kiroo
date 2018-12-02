@@ -1,0 +1,185 @@
+---
+title: "Appendices"
+output:
+  pdf_document: 
+    extra_dependencies: ["graphicx"]
+  html_document:
+    self_contained: no 
+---
+
+- Appendix titles 
+
+\begin{center}
+\textbf{\LARGE Appendix A}
+
+\textit{This appendix includes tables of sample data sets.}
+\end{center}
+
+- install knitr and open data that we want to create the tables of:
+
+  - example: European (Norway) puffins with Temperature values
+
+1. Code for creating nice tables with kable and kableExtra packages 
+
+```{r, include = F}
+library(kableExtra)
+library(tidyverse)
+library(viridisLite)
+library(knitr)
+```
+
+```{r}
+puffins_t <- read.csv("./data/puffins_temp.csv")
+
+puffins_t <- puffins_t %>%
+  rename("Year" = year, "Country list" = Country.list, "Population trend" = pop_trend, 
+         "ID" = id, "Mean max. T (°C)" = mean_tmax, "Mean min. T (°C)" = mean_tmin) 
+```
+
+
+```{r}
+puffins_t %>%
+  slice(1:10) %>%
+  kable(digits = 2) %>%
+  kable_styling(bootstrap_options = "striped", full_width = F, 
+                position = "center", font_size = 10) %>%
+  add_header_above(c(" ", "EU puffins" = 2, " ", "Mean Temperatue (°C)" = 2)) %>%
+  column_spec(3, color = "red", bold = T)  %>%
+  column_spec(5:6, color = "green", bold = T) %>%
+  row_spec(0, bold = T)  %>%
+  group_rows("1970s", 1,2) %>%
+  group_rows("1980s", 3,10)
+```
+- ADD PART AT THE END OF TUTORIAL: 'IT'S YOUR TURN!', where people can choose a different data set and play with the package kable etc. 
+
+
+Next: testing that page break works: 
+(IT DOES! WOOT)
+
+\newpage
+
+
+\begin{center}
+\textbf{\LARGE Appendix B}
+
+\textit{This appendix includes additional figures.}
+\end{center}
+
+
+Second type of appendix: additional figures and graphs. 
+
+They can help calrify some summarised graphs from the main text; 
+they can give more insight on a detailed section of explanation in the text. 
+
+Example: Norway puffins and relationship with temperature data. 
+If on main text the comparison between puffin abundance and max/min T data have 
+been presented (as follows), in the Appendix it could be useful to add the graphs obtained 
+from calculating general climate data, as well as average of minimum and maximum
+temperature (always in °C).
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.0\textwidth,keepaspectratio]{main_fig/pop_tmax.png}
+\caption{This is one of the figures in the main body of text.}
+\end{figure}
+
+
+In the appendix, it is perhaps appropriate to add figures on climate trends, and 
+average max and min temperatures. These graphs can be generated directly in the
+notebook by using the code chunks. Just as follows:
+```{r, include= T}
+#if you want you can create the plot for climate data here:
+
+climate_data <- read.csv("./data/Lerwick_temp_data.csv")
+library(ggplot2)
+
+# first graph for climate data (generic) ----
+climate_plot <- ggplot(climate_data) + 
+  ggtitle("Temperature change (1930-2018)") +
+  theme(plot.title = element_text(size = 20, hjust = 0.5, vjust = 0.5, face = "bold"), 
+        panel.background = element_rect(fill = "white"), 
+        panel.grid.minor = element_line(colour = "grey", size = 0.1 ), 
+        panel.border = element_rect(colour = "grey", fill = NA), 
+        axis.text = element_text(size=15), 
+        axis.title = element_text(size = 20),
+        legend.text = element_text(size=15),
+        legend.title = element_blank()) +  
+  ylab("Temperature (°C)") + xlab(" ") + 
+  geom_line(aes(x = year, y = tmin, colour = "tmin")) + 
+  geom_point(aes(x = year, y = tmin, colour = "tmin")) +
+  geom_line(aes(x = year, y = tmax, colour = "tmax")) +  
+  geom_point(aes(x = year, y = tmax, colour = "tmax")) +
+  scale_color_discrete(name = "Temp.", labels = c ("Tmax", "Tmin"))
+
+ggsave("appendix_fig/climate_data.png", last_plot(), 
+       width = 20, height = 10, units = "in", 
+       dpi = 500) 
+
+# Second graph for mean max. and min. T (°C) ----
+
+mean_t_data <- climate_data %>% 
+  group_by(year) %>%  
+  summarise(mean_tmax = mean(tmax),  
+            mean_tmin = mean(tmin)) %>% 
+  write_csv(file.path("mean_t_data.csv")) # new csv with mean t data
+
+meant_plot <- ggplot(mean_t_data) + 
+  ggtitle("Mean temperature change (1930-2018)") + 
+  theme(plot.title = element_text(size = 20, hjust = 0.5, vjust = 0.5, face = "bold"),
+        panel.background = element_rect(fill = "white"),
+        panel.grid.minor = element_line(colour = "grey", size = 0.1 ),
+        panel.border = element_rect(colour = "grey", fill = NA), 
+        axis.title = element_text(size = 20),
+        axis.text = element_text(size = 15),
+        legend.text = element_text(size = 15), 
+        legend.title = element_blank()) +
+  ylab("Average temperature (°C)") + xlab(" ") +
+  geom_line(aes(x = year, y = mean_tmin, colour = "mean_tmin")) + 
+  geom_point(aes(x = year, y = mean_tmin, colour = "mean_tmin")) +
+  geom_line(aes(x = year, y = mean_tmax, colour = "mean_tmax")) + 
+  geom_point(aes(x = year, y = mean_tmax, colour = "mean_tmax")) +
+  scale_color_discrete(name = "Temp.", labels = c ("Mean Tmax", "Mean Tmin"))
+
+ggsave("appendix_fig/Mean_T.png", last_plot(),
+       width = 20, height = 10, 
+       dpi = 500)
+```
+
+The code above has created the data sets used in to filter the climate data and 
+the averages from the main, raw data set. Below is the reproduction of these figures 
+in the notebook. NOTE: the figures which are produced through R must be called within 
+a code chunk. 
+
+```{r echo=FALSE, out.width='.50\\linewidth', fig.width=10, fig.height=8,fig.show='hold'}
+climate_plot 
+meant_plot
+```
+
+In case the figures were already existing and saved within the main repo, this could be 
+done by calling within a code chunk: 
+```{r, echo = TRUE, out.height="40%", fig.show='hold', fig.align="center",  fig.cap="Additional images in Appendix B"}
+img_appendix<-list.files("appendix_fig/", pattern = ".png", full.names = TRUE)
+include_graphics(img_appendix)
+```
+
+However, with this method is harder to control and change figure size so as to have them both aligned. 
+(Perhaps can show what happens by attempting it.) It is suggested to create the figures within the chunk, as manipulation becomes easier. Plus, it follows idea of transparency and, in sharing the html/pdf output of the notebook, whoever has access to it can see the code behind the figures or tables produced. 
+
+\newpage
+
+\begin{center}
+\textbf{\LARGE Appendix C}
+
+\textit{\large This appendix includes the code used in the main body of text.}
+\end{center}
+
+This chunk of code allows to take all the code used from the main body of text 
+and join it into a single chunk, as below:
+
+```{r code=readLines(knitr::purl('./main_text.Rmd', documentation = 0)), eval = FALSE}
+```
+
+As you can see, all the code used in the main text, that we hid, is now visible here! 
+
+Great job! 
