@@ -12,6 +12,8 @@ Repository structure:
 
 - [main_fig folder], containing the figures used in the 'mock_dissertation' files
 
+- [License](/LICENSE) and [gitignore](/.gitignore) files
+
 - [mock_dissertation R Markdown file](/mock_dissertation.Rmd) and [mock_dissertation pdf file](/mock_dissertation.pdf) are files that I provide as example of main document produced with R Markdown. The aim is to create an Appendix for it. 
 
 <p align="center">
