@@ -10,7 +10,7 @@ Repository structure:
 
 - ['extra' folder](/extra) with additional tables and a figure that people can use as practice 
 
-- [main_fig folder], containing the figures used in the 'mock_dissertation' files
+- [main_fig folder](/main_fig), containing the figures used in the 'mock_dissertation' files
 
 - [License](/LICENSE) and [gitignore](/.gitignore) files
 
