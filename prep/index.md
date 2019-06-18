@@ -58,7 +58,7 @@ To get started, download this x<a href="https://github.com/AnnaChirumbolo/tutori
 
 <a name="subsect1"></a>
 
-\fbox{### LaTex vs. other markup languages
+\fbox{LaTex vs. other markup languages
 
 *Why LaTex and not another markup language?*
 
