@@ -2,9 +2,7 @@
   <b><font size="5">R Markdown pt. II tutorial: how to create an Appendix document.</font></b>
 </p>
 
-<sub>By _**Anna**_, last edited on _**June 6**_, 2019
-
-bla bla 
+<sub>By _**Anna**_, last edited on _**June 18**_, 2019
 
 ### Tutorial Aims
 
@@ -22,9 +20,9 @@ bla bla
 
 #### <a href="#section1"> 1. The appendix document.</a>
 #### <a href="#section2"> 2. Create the appendix sections using `LaTex` syntax.</a>
-  <a href="#subsect1"><sub> (a) Write headings and titles </sub></a>
+  <a href="#subsect1"><sub> (a) LaTex vs. other markup languages </sub></a>
 
-  <a href="#subsect2"><sub> (b) LaTex vs. other markup languages </sub></a>
+  <a href="#subsect2"><sub> (b) Write headings and titles </sub></a>
 
   <a href="#subsect3"><sub> (c) Place the appendices in distinct pages </sub></a>
 
@@ -59,6 +57,19 @@ To get started, download this x<a href="https://github.com/AnnaChirumbolo/tutori
 ## 2. Create the appendix sections using LaTex syntax.
 
 <a name="subsect1"></a>
+
+---
+### LaTex vs. other markup languages
+
+*Why LaTex and not another markup language?*
+
+...you might be asking yourself.
+
+`LaTex` is a "high quality typesetting system" used to produce technical and scientific documentation. It is based on the idea that "it's better to leave document design to document designers, and to let authors get on with writing documents".[^3]
+
+I know, this syntax structure is less appealing than other markup languages (i.e. Markdown, html). Markdown is indeed a better option to focus on contents and format a document easily. That is because markdown has been created with the purpose of being a very *lightweight* markup language, therefore providing a simple code to write in simple format.
+LaTex has a longer learning curve and it is not as handy to use, however it is a much more powerful tool that allows high customisation and high control of your documents, for inserting multiple sections, cross-referencing, adding tables, figures and drawing (diagrams, statistical graphs, chemical formulas, etc.).
+---
 
 ### a) Write headings and titles
 
@@ -111,15 +122,7 @@ To write the headings in [`LaTex`](https://www.latex-project.org/about/) languag
 
 <a name="subsect2"></a>
 
-### b) LaTex vs. other markup languages
-
-*Why LaTex and not another markup language?*
-
-...you might be asking yourself.
-
-`LaTex` is a "high quality typesetting system" used to produce technical and scientific documentation. It is based on the idea that "it's better to leave document design to document designers, and to let authors get on with writing documents".[^3]
-
-I know, this syntax structure is less appealing than other markup languages (i.e. Markdown, html). However, it is a much more powerful tool that allows high customisation and high control of your documents, for inserting multiple sections, cross-referencing, adding tables, figures, etc.
+### b) Centre the headings
 
 In the context of this tutorial, the centring of the text could not be achieved with another language for a pdf output. Firstly, Markdown `[doesn't support text alignment](https://stackoverflow.com/questions/14051715/markdown-native-text-alignment)` and would require either `[hmtl](https://www.w3schools.com/html/default.asp)` or `[CSS](https://www.w3schools.com/css/default.asp)` support. However, not even html is applicable when the desired output is pdf.
 
@@ -161,7 +164,6 @@ On the other hand, if you look at the HTML it's the LaTex syntax that disappears
 To summarise on this point, the syntax changes *depending on the desired output format*. So bare this in mind when you want to write your document!
 
 You can delete the text in html syntax. Let's move on.
-
 <a name="subsect3"></a>
 
 ### c) Place the appendices in distinct pages
