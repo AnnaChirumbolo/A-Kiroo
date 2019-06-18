@@ -24,9 +24,9 @@
 
   <a href="#subsect2"><sub> (b) Place the appendices in distinct pages </sub></a>
 
-#### <a href="#section3"> 3. Appendix I: tables of raw data.</a>
-#### <a href="#section4"> 4. Appendix II: additional figures.</a>
-#### <a href="#section5"> 5. Appendix III: code.</a>
+#### <a href="#section3"> 3. Appendix A: tables of raw data.</a>
+#### <a href="#section4"> 4. Appendix B: additional figures.</a>
+#### <a href="#section5"> 5. Appendix C: code.</a>
 #### <a href="#section6"> 6. Insert the Appendix in the main text.</a>
 #### <a href="#section7"> 7. Try it yourself!</a>
 
@@ -55,6 +55,7 @@ To get started, download this <a href="https://github.com/AnnaChirumbolo/tutoria
 
 ## 2. Create the appendix sections using LaTex syntax.
 
+
 > **_NOTE: LaTex vs. other markup languages_**
 >
 >*Why LaTex and not another markup language?*
@@ -70,14 +71,16 @@ LaTex has a longer learning curve and it is not as handy to use, however it is a
 
 ### a) Write headings and titles
 
-First thing in the agenda - open `Rstudio`! Once you've done that open the tutorial folder that you have downloaded by clicking on 'Project:(none)' on the upper right and selecting Open Project > tutorial_repo. This will set the working directory to the tutorial folder.
+First thing in the agenda - open `Rstudio`! Once you've done that open the tutorial folder that you have downloaded by clicking on 'Project:(none)' on the upper right and selecting Open Project > tutorial_repo-master. This will set the working directory to the tutorial folder.
 
 Create a new `R Markdown` file. Give it an informative title, such as 'appendix', and change the 'Default Output Format' to PDF. You can read in brackets that the pdf requires <a href="https://miktex.org/howto/install-miktex" target="____blank">MikTex</a> for Windows,  <a href="http://www.tug.org/mactex/" target="____blank">MacTex </a> for Mac or <a href="https://www.tug.org/texlive/" target="____blank">Tex Live</a> for Linux.
 
 Have a look at the new file. It presents already some information in the **YAML header** (title and output type) and it also give some basic information on **Markdown syntax** and how to **include plots**. If you're interested give it a read, but delete everything afterwards **except the YAML header**, as we're not going to use that information for the tutorial.
 
+INSERT SS1
+
 Make sure you add your name as author and date in the YAML header, by adding 'Author:' and 'Date:' on separate lines.
-You can specify as many functions within the <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf" target="____blank">YAML header</a> as you find necessary, but we're just going to leave it basic for this tutorial
+You can specify as many functions within the <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf" target="____blank">YAML header</a> as you find necessary, but we're just going to leave it basic for this tutorial.
 
 Now that the file is blank, let's start writing the different headings for each appendix we're going to create. Following the rules of formatting, each appendix heading should be labelled with a letter (in order of appearance in the main document), centred and in bold font, and have a title accompanying it to clarify the appendix content.
 
@@ -159,6 +162,7 @@ However, if you look at the pdf, there are duplicates of the headings that are n
 >On the other hand, if you look at the HTML it's the LaTex syntax that disappears. In fact, if you temporarily delete the text written in LaTex and re-knit the HTML file, you'll notice that the output hasn't changed.
 >
 >To summarise on this point, the syntax changes *depending on the desired output format*. So bare this in mind when you want to write your document!
+>
 >You can delete the html text in order to move forward with the tutorial.
 
 <a name="subsect2"></a>
@@ -176,7 +180,7 @@ Once this has been set up, you can start creating the different types of appendi
 
 <a name="section3"></a>
 
-## 3. Appendix I: Tables of raw data.
+## 3. Appendix A: Tables of raw data.
 
 One type of appendix could contain tables of the raw data collected, so that readers and reviewers have a better insight on the results that are summarised or only visually represented in the main body of text.
 
@@ -211,9 +215,11 @@ puffins_t <- puffins_t %>%
   rename("Year" = year, "Country list" = Country.list, "Population trend" = pop_trend, "ID" = id, "Mean max. T (°C)" = mean_tmax, "Mean min. T (°C)" = mean_tmin)  # A bit of data transformation! "New name" = Old.name
 ```
 
-Now the headings have much clearer and neater names. The data set is almost presentable and ready to be inserted in a table. There are still other details, like number of decimals to be fixed, that `knitr::kable()` function helps fixing. `kableExtra` is an additional package that uses `kable()` and *pipes* from the `Tidyverse` package to build very complex and professional tables. We can explore some of these combined packages to produce a table for a sample of the data set that we have just loaded.
+Now the headings have much clearer and neater names. The data set is almost presentable and ready to be inserted in a table. There are still other details, like number of decimals to be fixed, that `knitr::kable()` function helps fixing.
 
-Copy the following code chunk and run it.
+`kableExtra` is an additional package that uses `kable()` and *pipes* from the `Tidyverse` package to build very complex and professional tables. We can explore some of these combined packages to produce a table for a sample of the data set that we have just loaded.
+
+Copy the following code chunk and run it. Make sure the two chunks are spaced between each other.
 
 ~~~~
 ```{r echo=F}
@@ -226,6 +232,8 @@ puffins_t %>%
 ~~~~
 
 You can notice that the table has now appeared after the chunk and in the 'Viewer' tab on the bottom-right panel.
+
+INSERT SS2
 
 <div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/49406535-c1288200-f74d-11e8-96e2-3a3214342b9c.png"/></div>
 
@@ -272,9 +280,8 @@ puffins_t %>%
   kable(digits = 2) %>%
   kable_styling(full_width = F,
                 position = "center", font_size = 10) %>%
-  add_header_above(c(" ", "EU puffins" = 3, "Mean Temperatue (°C)" = 2), bold=T,
-                    font_size=13) %>% # this adds one header the columns 2-3-4,
-                                        # and one for the columns 5-6.
+  add_header_above(c(" ", "EU puffins" = 3, "Mean Temperatue (°C)" = 2), bold=T) %>% # this adds one header the columns 2-3-4,  
+                                                                                      # and one for the columns 5-6.
   group_rows("1970s", 1,2) %>% # the first two rows are grouped as 1970s
   group_rows("1980s", 3,10) # the remaining rows are grouped as 1980s
 ```
@@ -290,7 +297,7 @@ Let's look at another type of appendix.
 
 <a name="section5"></a>
 
-## 4. Appendix II: additional figures.
+## 4. Appendix B: additional figures.
 
 A second appendix that is often used contains additional figures to support the main document. I have prepared a mock example of a main document called 'mock_dissertation.Rmd' that you can find in the folder. The document contains all the typical sections of a dissertation/thesis. If you open it you can see what figures there are. The figures show, respectively, trends in puffin populations with high (top-left) and low (top-right) average temperature (°C) values, and a correlation mat (bottom).
 
@@ -444,19 +451,24 @@ knitr::knit_hooks$set(plot = function(x, options)  {
 
 This function allows to set a new option in the code chunks with the figures: `fig.pos="H"`. This does the trick in holding the figure in the right order. Let's go back to the chunks in Appendix B and add `fig.pos="H"`in each. Knit again: you'll see the order has been fixed.
 
+INSERT SS3
+
 These are a few examples of code chunks options to change settings of figures. You can check this <a href="https://yihui.name/knitr/options/" target="____blank">blog post</a> by **Yihui Xie** to find more about the *chunk options* available.
 
 Let's move on to the third and last appendix type in this tutorial.
 
 <a name="section6"></a>
 
-## 5. Appendix III: code.
+## 5. Appendix C: code.
 
 As a third example, let's imagine that we want to use *Appendix C* to include all the code used in the main document to present results (summarised data, tables and figures). In the main text it is unlikely to see the code that produces a certain output, unless that document is about coding itself...
 Making the code used available in an appendix favours the **transparency and replicability of the work done.**
 
-There is a very simple, single line of code to insert within the chunk `{}`, that reads all the code used from a specified document, joins it and inserts it within the same chunk. This operation can be done assuming that the text itself was created from an `R Markdown` document and therefore contains code. This idea is credited to <a href="https://twitter.com/alexpghayes/status/1039170310560464897" target="____blank">Alex Hayes</a>:
+There is a very simple, single line of code to insert within the chunk `{}`, that reads all the code used from a specified document, joins it and inserts it within the same chunk. This operation can be done assuming that the text itself was created from an `R Markdown` document and therefore contains code.
 
+<sub>This idea is credited to <a href="https://twitter.com/alexpghayes/status/1039170310560464897" target="____blank">Alex Hayes</a>:<\sub>
+
+Insert the following code chunk at the bottom of the markdown file, after the last `\end{center}`. 
 ~~~~
 ```{r code=readLines(knitr::purl('./mock_dissertation.Rmd', documentation = 0)), eval = F}
 ```
