@@ -58,7 +58,7 @@ To get started, download this x<a href="https://github.com/AnnaChirumbolo/tutori
 
 <a name="subsect1"></a>
 
----
+```
 ### LaTex vs. other markup languages
 
 *Why LaTex and not another markup language?*
@@ -69,7 +69,7 @@ To get started, download this x<a href="https://github.com/AnnaChirumbolo/tutori
 
 I know, this syntax structure is less appealing than other markup languages (i.e. Markdown, html). Markdown is indeed a better option to focus on contents and format a document easily. That is because markdown has been created with the purpose of being a very *lightweight* markup language, therefore providing a simple code to write in simple format.
 LaTex has a longer learning curve and it is not as handy to use, however it is a much more powerful tool that allows high customisation and high control of your documents, for inserting multiple sections, cross-referencing, adding tables, figures and drawing (diagrams, statistical graphs, chemical formulas, etc.).
----
+```
 
 ### a) Write headings and titles
 
