@@ -192,7 +192,7 @@ library(tidyverse) # for data manipulation
 
 *Note: `include=F` in the `{}` makes sure that neither code chunk nor output are shown in the pdf output.*
 
-Also the `tidyverse` package has to be loaded or installed (`install.packages()`) to do some data transformation. If you have never used the `tidyverse` package before don't worry - it is not part of the learning objectives for this tutorial. For now, just copy the code. If you want to learn about the Tidyverse, do this [Coding Club tutorial](https://ourcodingclub.github.io/2017/03/20/seecc.html).
+Also the `tidyverse` package has to be loaded or installed (`install.packages()`) to do some data transformation. If you have never used the `tidyverse` package before don't worry - it is not part of the learning objectives for this tutorial. For now, just copy the code. If you want to learn about the Tidyverse, do this <a href="https://ourcodingclub.github.io/2017/03/20/seecc.html" target="____blank">Coding Club tutorial</a>.
 
 The data set you are going to use is called 'puffins_temp.csv' - it contains information on population trends of Atlantic puffins (*Fratercula arctica*) surveyed in Norway, together with the average of maximum and minimum temperatures (°C) over the years 1979-2008.
 
@@ -282,7 +282,7 @@ puffins_t %>%
 
 **NOTE: The the tables that you can see in R are the in an HTML output. The tables in the pdf have a different appearance. Keep this in mind when you set the table features and knit the `R Markdown` every now and then to check on the actual result.**
 
-`kableExtra` has a really high variety of features for creating tables and it is often combined with another package called `viridisLite` for using smoother [colour scales](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html). If you are interested in finding out more about the resources of the package, have a look at its [manual](https://cran.r-project.org/web/packages/kableExtra/kableExtra.pdf).[^4]
+`kableExtra` has a really high variety of features for creating tables and it is often combined with another package called `viridisLite` for using smoother <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html" target="____blank">colour scales</a>. If you are interested in finding out more about the resources of the package, have a look at its <a href="https://cran.r-project.org/web/packages/kableExtra/kableExtra.pdf" target="____blank">manual</a>.[^4]
 
 Let's look at another type of appendix.
 
@@ -294,7 +294,7 @@ A second appendix that is often used contains additional figures to support the 
 
 <div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/49405869-c84e9080-f74b-11e8-8129-5edbb3c221e5.png" /></div>
 
-<sub> You can also find these figures saved in the ['main_fig' folder](https://github.com/AnnaChirumbolo/tutorial_repo/tree/master/main_fig).</sub>
+<sub> You can also find these figures saved in the <a href="https://github.com/AnnaChirumbolo/tutorial_repo/tree/master/main_fig" target="____blank">'main_fig' folder</a>.</sub>
 
 Let's imagine we want to add more explanatory figures in the appendix, for example to show the overall climate trend and averages of maximum and minimum temperature changes (°C). We have data from the 1930s until 2018, so we need to do some data transformation that allows us to show the data during the same time period as the graphs in the main document (1979-2008).
 
@@ -438,11 +438,11 @@ knitr::knit_hooks$set(plot = function(x, options)  {
 })
 ```
 ~~~~
-<sub> Credits to [Martin Schmelzer](https://stackoverflow.com/questions/16626462/figure-position-in-markdown-when-converting-to-pdf-with-knitr-and-pandoc)</sub>
+<sub> Credits to <a href="https://stackoverflow.com/questions/16626462/figure-position-in-markdown-when-converting-to-pdf-with-knitr-and-pandoc" target="____blank">Martin Schmelzer</a>.</sub>
 
 This function allows to set a new option in the code chunks with the figures: `fig.pos="H"`. This does the trick in holding the figure in the right order. Let's go back to the chunks in Appendix B and add `fig.pos="H"`in each. Knit again: you'll see the order has been fixed.
 
-<sub>These are a few examples of code chunks options to change settings of figures. You can check this [blog post](https://yihui.name/knitr/options/) by **Yihui Xie** to find more about the *chunk options* available.</sub>
+These are a few examples of code chunks options to change settings of figures. You can check this <a href="https://yihui.name/knitr/options/" target="____blank">blog post</a> by **Yihui Xie** to find more about the *chunk options* available.
 
 Let's move on to the third and last appendix type in this tutorial.
 
@@ -453,7 +453,7 @@ Let's move on to the third and last appendix type in this tutorial.
 As a third example, let's imagine that we want to use *Appendix C* to include all the code used in the main document to present results (summarised data, tables and figures). In the main text it is unlikely to see the code that produces a certain output, unless that document is about coding itself...
 Making the code used available in an appendix favours the **transparency and replicability of the work done.**
 
-There is a very simple, single line of code to insert within the chunk `{}`, that reads all the code used from a specified document, joins it and inserts it within the same chunk. This operation can be done assuming that the text itself was created from an `R Markdown` document and therefore contains code. This idea is credited to [Alex Hayes](https://twitter.com/alexpghayes/status/1039170310560464897):
+There is a very simple, single line of code to insert within the chunk `{}`, that reads all the code used from a specified document, joins it and inserts it within the same chunk. This operation can be done assuming that the text itself was created from an `R Markdown` document and therefore contains code. This idea is credited to <a href="https://twitter.com/alexpghayes/status/1039170310560464897" target="____blank">Alex Hayes</a>:
 
 ~~~~
 ```{r code=readLines(knitr::purl('./mock_dissertation.Rmd', documentation = 0)), eval = F}
@@ -513,10 +513,10 @@ In the repository, there is a folder called ['extra'](https://github.com/AnnaChi
 
 Useful links:
 
-[^1]: To find more about Appendices and formatting guidelines check [*Organising Your Social Sciences Research Paper: Appendices*](http://libguides.usc.edu/writingguide/appendices).
+[^1]: To find more about Appendices and formatting guidelines check <a href="http://libguides.usc.edu/writingguide/appendices" target="____blank">*Organising Your Social Sciences Research Paper: Appendices*</a>.
 
-[^2]: If you are interested in R Markdown in general, follow this [link](https://bookdown.org/yihui/rmarkdown/) to *R Markdown: The Definitive Guide*.
+[^2]: If you are interested in R Markdown in general, follow this <a href="https://bookdown.org/yihui/rmarkdown/" target="____blank">link</a> to *R Markdown: The Definitive Guide*.
 
-[^3]: If you would like to learn more about `LaTex` syntax and how to apply it for building up your thesis, check this series of [blog posts](https://rosannavanhespenresearch.wordpress.com/2016/02/03/writing-your-thesis-with-r-markdown-1-getting-started/) by **Rosanna van Hespen**. The GitHub Repository for these posts can be found [here](https://github.com/rosannav/thesis_in_rmarkdown/tree/master/example_thesis). At [LaTex project](https://www.latex-project.org) website you can find more about syntax and documentation.
+[^3]: If you would like to learn more about `LaTex` syntax and how to apply it for building up your thesis, check this series of <a href="https://rosannavanhespenresearch.wordpress.com/2016/02/03/writing-your-thesis-with-r-markdown-1-getting-started/" target="____blank">blog posts</a> by **Rosanna van Hespen**. The GitHub Repository for these posts can be found <a href="https://github.com/rosannav/thesis_in_rmarkdown/tree/master/example_thesis" target="____blank">here</a>. At <a href="https://www.latex-project.org" target="____blank">LaTex project</a> website you can find more about syntax and documentation.
 
-[^4]: This [link](https://cran.r-project.org/web/packages/viridisLite/viridisLite.pdf) will send you to the *viridisLite* package and this [tutorial](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) explores more about its applications with `kableExtra`.
+[^4]: This <a href="https://cran.r-project.org/web/packages/viridisLite/viridisLite.pdf" target="____blank">link</a> will send you to the *viridisLite* package and this <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html" target="____blank">tutorial</a> explores more about its applications with `kableExtra`.
