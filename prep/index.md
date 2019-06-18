@@ -124,25 +124,26 @@ To write the headings in <a href="https://www.latex-project.org/about/" target="
 >Markdown <a href="https://stackoverflow.com/questions/14051715/markdown-native-text-alignment" target="____blank"> **doesn't support text alignment** </a> and would require either <a href="https://www.w3schools.com/html/default.asp" target="____blank">*html*</a> or <a href="https://www.w3schools.com/css/default.asp" target="____blank">*CSS*</a> support. However, in our case and with our formatting aims, none of these languages are applicable when the desired output is a pdf document. **Only LaTex provides the desired format.**
 >You can try format the same headings as before, this time using *html*.
 Copy the following **after** the text you've already written (in LaTex), so we can compare the two in two outputs: pdf and HTML.
-```
+>---
 <div style="text-align:center">
   <span style="color:black; font-family:Calbiri; font-size:2em;">Appendix A.</span>
-
-  <span style="color:black; font-family:Calbiri; font-size:1em;"><i>This appendix includes tables of sample data sets.</i></span>
+>
+>  <span style="color:black; font-family:Calbiri; font-size:1em;"><i>This appendix includes tables of sample data sets.</i></span>
 </div>
-
-<div style="text-align:center">
+>
+><div style="text-align:center">
   <span style="color:black; font-family:Calbiri; font-size:2em;">Appendix B.</span>
-
-  <span style="color:black; font-family:Calbiri; font-size:1em;"><i>This appendix includes additional figures.</i></span>
+>
+>  <span style="color:black; font-family:Calbiri; font-size:1em;"><i>This appendix includes additional figures.</i></span>
 </div>
-
-<div style="text-align:center">
+>
+><div style="text-align:center">
   <span style="color:black; font-family:Calbiri; font-size:2em;">Appendix C.</span>
-
-  <span style="color:black; font-family:Calbiri; font-size:1em;"><i>This appendix includes the code used.</i></span>
+>
+>  <span style="color:black; font-family:Calbiri; font-size:1em;"><i>This appendix includes the code used.</i></span>
 </div>
-```
+>---
+>
 >- The tags `<div>` define the text area, while `<span>` define the text characteristics;
 >
 >- Here it is necessary to specify the `font family` to achieve the same font as with LaTex (default Calibri);
