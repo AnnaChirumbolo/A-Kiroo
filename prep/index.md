@@ -4,6 +4,8 @@
 
 <sub>By _**Anna**_, last edited on _**June 6**_, 2019
 
+bla bla 
+
 ### Tutorial Aims
 
 1. Understand the advantages of using `R Markdown` for writing documents, with a focus on appendices;
