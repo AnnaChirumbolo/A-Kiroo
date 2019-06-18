@@ -20,11 +20,9 @@
 
 #### <a href="#section1"> 1. The appendix document.</a>
 #### <a href="#section2"> 2. Create the appendix sections using `LaTex` syntax.</a>
-  <a href="#subsect1"><sub> (a) LaTex vs. other markup languages </sub></a>
+  <a href="#subsect1"><sub> (a) Write headings and titles </sub></a>
 
-  <a href="#subsect2"><sub> (b) Write headings and titles </sub></a>
-
-  <a href="#subsect3"><sub> (c) Place the appendices in distinct pages </sub></a>
+  <a href="#subsect2"><sub> (b) Place the appendices in distinct pages </sub></a>
 
 #### <a href="#section3"> 3. Appendix I: tables of raw data.</a>
 #### <a href="#section4"> 4. Appendix II: additional figures.</a>
@@ -33,6 +31,7 @@
 #### <a href="#section7"> 7. Try it yourself!</a>
 
 <a name="section1"></a>
+
 ## 1. The appendix document.
 
 *What are Appendices?*
@@ -56,8 +55,6 @@ To get started, download this <a href="https://github.com/AnnaChirumbolo/tutoria
 
 ## 2. Create the appendix sections using LaTex syntax.
 
-<a name="subsect1"></a>
-
 > **_NOTE: LaTex vs. other markup languages_**
 >
 >*Why LaTex and not another markup language?*
@@ -68,6 +65,8 @@ To get started, download this <a href="https://github.com/AnnaChirumbolo/tutoria
 >
 >I know, this syntax structure is less appealing than other markup languages (i.e. Markdown, html). Markdown is indeed a better option to focus on contents and format a document easily. That is because markdown has been created with the purpose of being a very *lightweight* markup language, therefore providing a simple code to write in simple format.
 LaTex has a longer learning curve and it is not as handy to use, however it is a much more powerful tool that allows high customisation and high control of your documents, for inserting multiple sections, cross-referencing, adding tables, figures and drawing (diagrams, statistical graphs, chemical formulas, etc.).
+
+<a name="subsect1"></a>
 
 ### a) Write headings and titles
 
@@ -124,26 +123,25 @@ To write the headings in <a href="https://www.latex-project.org/about/" target="
 >Markdown <a href="https://stackoverflow.com/questions/14051715/markdown-native-text-alignment" target="____blank"> **doesn't support text alignment** </a> and would require either <a href="https://www.w3schools.com/html/default.asp" target="____blank">*html*</a> or <a href="https://www.w3schools.com/css/default.asp" target="____blank">*CSS*</a> support. However, in our case and with our formatting aims, none of these languages are applicable when the desired output is a pdf document. **Only LaTex provides the desired format.**
 >You can try format the same headings as before, this time using *html*.
 Copy the following **after** the text you've already written (in LaTex), so we can compare the two in two outputs: pdf and HTML.
->---
+```
 <div style="text-align:center">
   <span style="color:black; font-family:Calbiri; font-size:2em;">Appendix A.</span>
->
->  <span style="color:black; font-family:Calbiri; font-size:1em;"><i>This appendix includes tables of sample data sets.</i></span>
+
+  <span style="color:black; font-family:Calbiri; font-size:1em;"><i>This appendix includes tables of sample data sets.</i></span>
 </div>
->
-><div style="text-align:center">
+
+<div style="text-align:center">
   <span style="color:black; font-family:Calbiri; font-size:2em;">Appendix B.</span>
->
->  <span style="color:black; font-family:Calbiri; font-size:1em;"><i>This appendix includes additional figures.</i></span>
+
+  <span style="color:black; font-family:Calbiri; font-size:1em;"><i>This appendix includes additional figures.</i></span>
 </div>
->
-><div style="text-align:center">
+
+<div style="text-align:center">
   <span style="color:black; font-family:Calbiri; font-size:2em;">Appendix C.</span>
->
->  <span style="color:black; font-family:Calbiri; font-size:1em;"><i>This appendix includes the code used.</i></span>
+
+  <span style="color:black; font-family:Calbiri; font-size:1em;"><i>This appendix includes the code used.</i></span>
 </div>
->---
->
+```
 >- The tags `<div>` define the text area, while `<span>` define the text characteristics;
 >
 >- Here it is necessary to specify the `font family` to achieve the same font as with LaTex (default Calibri);
@@ -159,12 +157,11 @@ However, if you look at the pdf, there are duplicates of the headings that are n
 >On the other hand, if you look at the HTML it's the LaTex syntax that disappears. In fact, if you temporarily delete the text written in LaTex and re-knit the HTML file, you'll notice that the output hasn't changed.
 >
 >To summarise on this point, the syntax changes *depending on the desired output format*. So bare this in mind when you want to write your document!
-
-
+>You can delete the html text in order to move forward with the tutorial.
 
 <a name="subsect2"></a>
 
-### c) Place the appendices in distinct pages
+### b) Place the appendices in distinct pages
 
 At this stage the headings are just listed one after the other and only separated by continuous lines (see the pdf output). To actually separate them into distinct pages write (in *LaTex*)
 
@@ -175,7 +172,7 @@ instead of the dashed lines between the headings. If you knit again, you're goin
 
 Once this has been set up, you can start creating the different types of appendices.
 
-<a name="section4"></a>
+<a name="section3"></a>
 
 ## 3. Appendix I: Tables of raw data.
 
