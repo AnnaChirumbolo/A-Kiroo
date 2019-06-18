@@ -306,8 +306,9 @@ library(ggplot2) # to make beautiful graphs
 ```
 ~~~~
 
-The next code transforms the data and creates the graph of climate trends from 1979 until 2008. *WAIT to run the graphs to visualise the results. You'll figure out why, just read on. ;)*
+The next code transforms the data and creates the graph of climate trends from 1979 until 2008.
 
+<sub> *WAIT to run the graphs to visualise the results. You'll figure out why, just read on. ;)* </sub>
 
 ~~~~
 ```{r echo= F}
@@ -441,7 +442,7 @@ knitr::knit_hooks$set(plot = function(x, options)  {
 
 This function allows to set a new option in the code chunks with the figures: `fig.pos="H"`. This does the trick in holding the figure in the right order. Let's go back to the chunks in Appendix B and add `fig.pos="H"`in each. Knit again: you'll see the order has been fixed.
 
-These are a few examples of code chunks options to change settings of figures. You can check this [blog post](https://yihui.name/knitr/options/) by **Yihui Xie** to find more about the *chunk options* available.
+<sub>These are a few examples of code chunks options to change settings of figures. You can check this [blog post](https://yihui.name/knitr/options/) by **Yihui Xie** to find more about the *chunk options* available.</sub>
 
 Let's move on to the third and last appendix type in this tutorial.
 
@@ -450,7 +451,7 @@ Let's move on to the third and last appendix type in this tutorial.
 ## 5. Appendix III: code.
 
 As a third example, let's imagine that we want to use *Appendix C* to include all the code used in the main document to present results (summarised data, tables and figures). In the main text it is unlikely to see the code that produces a certain output, unless that document is about coding itself...
-Making the code used available in an appendix favours the transparency and replicability of the work done.
+Making the code used available in an appendix favours the **transparency and replicability of the work done.**
 
 There is a very simple, single line of code to insert within the chunk `{}`, that reads all the code used from a specified document, joins it and inserts it within the same chunk. This operation can be done assuming that the text itself was created from an `R Markdown` document and therefore contains code. This idea is credited to [Alex Hayes](https://twitter.com/alexpghayes/status/1039170310560464897):
 
@@ -468,7 +469,7 @@ A long list of code lines should appear within the code chunk and it corresponds
 If you want to check that the code is actually the same as the one that produces the 'mock_dissertation.pdf', open the 'mock_dissertation.Rmd' file and compare the list of code you obtained with the content of the code chunks in the latter.
 
 
-*Great job getting so far!*
+__*Great job getting so far!*__
 
 I have one last trick to show you.
 
@@ -479,7 +480,7 @@ I have one last trick to show you.
 
 Now that the appendix document is complete, it is time to add it to the main document!
 
-The mock 'mock_dissertation.pdf' document in the repository is only missing the appendix.
+The 'mock_dissertation.pdf' document in the repository is only missing the appendix.
 
 To add the content from the 'appendix.Rmd' into 'mock_dissertation.Rmd', go to the 'Appendix' section at the end of the main one and insert the following code chunk:
 ~~~~
