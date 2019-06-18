@@ -50,7 +50,7 @@ Some general rules on formatting Appendices:
 
 In this tutorial we're going to explore how to follow these formatting rules using `R Markdown`.[^2]  We are going to do so by exploring three different types of Appendices: for creating tables of raw data, for adding extra figures and for listing the code used in the main document. Finally, we are going to explore how to insert the appendix `.Rmd` document produced to a hypothetical main document.
 
-To get started, download this x<a href="https://github.com/AnnaChirumbolo/tutorial_repo" target="_blank">repository</a>_
+To get started, download this <a href="https://github.com/AnnaChirumbolo/tutorial_repo" target="____blank">repository</a>
 
 <a name="section2"></a>
 
@@ -58,8 +58,8 @@ To get started, download this x<a href="https://github.com/AnnaChirumbolo/tutori
 
 <a name="subsect1"></a>
 
-> **_LaTex vs. other markup languages:_**
-
+> **_NOTE: LaTex vs. other markup languages_**
+>
 >*Why LaTex and not another markup language?*
 >
 > ...you might be asking yourself.
@@ -73,16 +73,16 @@ LaTex has a longer learning curve and it is not as handy to use, however it is a
 
 First thing in the agenda - open `Rstudio`! Once you've done that open the tutorial folder that you have downloaded by clicking on 'Project:(none)' on the upper right and selecting Open Project > tutorial_repo. This will set the working directory to the tutorial folder.
 
-Create a new `R Markdown` file. Give it an informative title, such as 'appendix', and change the 'Default Output Format' to PDF. You can read in brackets that the pdf requires [`MikTex`](https://miktex.org/howto/install-miktex) for Windows, [`MacTex`](http://www.tug.org/mactex/) for Mac or [`Tex Live`](https://www.tug.org/texlive/) for Linux.
+Create a new `R Markdown` file. Give it an informative title, such as 'appendix', and change the 'Default Output Format' to PDF. You can read in brackets that the pdf requires <a href="https://miktex.org/howto/install-miktex" target="____blank">MikTex</a> for Windows,  <a href="http://www.tug.org/mactex/" target="____blank">MacTex </a> for Mac or <a href="https://www.tug.org/texlive/" target="____blank">Tex Live</a> for Linux.
 
 Have a look at the new file. It presents already some information in the **YAML header** (title and output type) and it also give some basic information on **Markdown syntax** and how to **include plots**. If you're interested give it a read, but delete everything afterwards **except the YAML header**, as we're not going to use that information for the tutorial.
 
 Make sure you add your name as author and date in the YAML header, by adding 'Author:' and 'Date:' on separate lines.
-You can specify as many functions within the [YAML header](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) as you find necessary, but we're just going to leave it basic for this tutorial.
+You can specify as many functions within the <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf" target="____blank">YAML header</a> as you find necessary, but we're just going to leave it basic for this tutorial
 
 Now that the file is blank, let's start writing the different headings for each appendix we're going to create. Following the rules of formatting, each appendix heading should be labelled with a letter (in order of appearance in the main document), centred and in bold font, and have a title accompanying it to clarify the appendix content.
 
-To write the headings in [`LaTex`](https://www.latex-project.org/about/) language, copy this after the YAML header.[^3]
+To write the headings in <a href="https://www.latex-project.org/about/" target="____blank">`LaTex`</a> language, copy this after the YAML header.[^3]
 
 ```
 \begin{center}
@@ -118,14 +118,12 @@ To write the headings in [`LaTex`](https://www.latex-project.org/about/) languag
 
 *Note: the writing is in American English. It won't work if you write in British English (i.e. "centre").*
 
-<a name="subsect2"></a>
 
-### b) Centre the headings
-
-In the context of this tutorial, the centring of the text could not be achieved with another language for a pdf output. Firstly, Markdown `[doesn't support text alignment](https://stackoverflow.com/questions/14051715/markdown-native-text-alignment)` and would require either `[hmtl](https://www.w3schools.com/html/default.asp)` or `[CSS](https://www.w3schools.com/css/default.asp)` support. However, not even html is applicable when the desired output is pdf.
-
-You can try format the same headings as before, this time using html.
-Copy the following after the text you've already written (in LaTex), so we can compare the two in two outputs: pdf and HTML.
+> **_NOTE: LaTex for centering headings_**
+>
+>Markdown <a href="https://stackoverflow.com/questions/14051715/markdown-native-text-alignment" target="____blank"> **doesn't support text alignment** </a> and would require either <a href="https://www.w3schools.com/html/default.asp" target="____blank">*html*</a> or <a href="https://www.w3schools.com/css/default.asp" target="____blank">*CSS*</a> support. However, in our case and with our formatting aims, none of these languages are applicable when the desired output is a pdf document. **Only LaTex provides the desired format.**
+>You can try format the same headings as before, this time using *html*.
+Copy the following **after** the text you've already written (in LaTex), so we can compare the two in two outputs: pdf and HTML.
 ```
 <div style="text-align:center">
   <span style="color:black; font-family:Calbiri; font-size:2em;">Appendix A.</span>
@@ -145,35 +143,36 @@ Copy the following after the text you've already written (in LaTex), so we can c
   <span style="color:black; font-family:Calbiri; font-size:1em;"><i>This appendix includes the code used.</i></span>
 </div>
 ```
-- The tags `<div>` define the text area, while `<span>` define the text characteristics;
-
-- Here it is necessary to specify the `font family` to achieve the same font as with LaTex (default Calibri);
-
-- The bigger text size for the heading is determined by the option `font-size:2em`;
-
-- Italics is specified with `<i>`.
-
-To notice the difference first knit the file as pdf, then do the same by knitting to HTML.
+>- The tags `<div>` define the text area, while `<span>` define the text characteristics;
+>
+>- Here it is necessary to specify the `font family` to achieve the same font as with LaTex (default Calibri);
+>
+>- The bigger text size for the heading is determined by the option `font-size:2em`;
+>
+>- Italics is specified with `<i>`.
+>
+>To notice the difference first knit the file as pdf, then do the same by knitting to HTML.
 Leave both outputs side by side: as you can see, the result is practically identical. There is the document title at the top followed by the heading and title, which are correctly centred and presenting the chosen font characteristics.
 However, if you look at the pdf, there are duplicates of the headings that are not properly formatted. That is the input written in html syntax that the pdf cannot read.
+>
+>On the other hand, if you look at the HTML it's the LaTex syntax that disappears. In fact, if you temporarily delete the text written in LaTex and re-knit the HTML file, you'll notice that the output hasn't changed.
+>
+>To summarise on this point, the syntax changes *depending on the desired output format*. So bare this in mind when you want to write your document!
 
-On the other hand, if you look at the HTML it's the LaTex syntax that disappears. In fact, if you temporarily delete the text written in LaTex and re-knit the HTML file, you'll notice that the output hasn't changed.
 
-To summarise on this point, the syntax changes *depending on the desired output format*. So bare this in mind when you want to write your document!
 
-You can delete the text in html syntax. Let's move on.
-<a name="subsect3"></a>
+<a name="subsect2"></a>
 
 ### c) Place the appendices in distinct pages
 
-At this stage the headings are just listed one after the other and only separated by continuous lines (see the pdf output). To actually separate them into distinct pages write
+At this stage the headings are just listed one after the other and only separated by continuous lines (see the pdf output). To actually separate them into distinct pages write (in *LaTex*)
 
 ```
 \newpage
 ```
 instead of the dashed lines between the headings. If you knit again, you're going to see that each heading successfully starts on a different page (and each page is already numbered!).
 
-Once this has been set up, you can create the different types of appendices.
+Once this has been set up, you can start creating the different types of appendices.
 
 <a name="section4"></a>
 
