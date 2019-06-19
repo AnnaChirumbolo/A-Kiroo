@@ -496,6 +496,7 @@ If you want to check that the code is actually the same as the one that produces
 
 
 __*Great job getting so far!*__
+If you want to check that you have correctly completed this tutorial, have a look at the completed appendix.pdf file that you can find HERE(LINK).
 
 I have one last trick to show you.
 
