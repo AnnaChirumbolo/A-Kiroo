@@ -307,7 +307,7 @@ puffins_t %>%
 
 Let's look at another type of appendix.
 
-<a name="section5"></a>
+<a name="section4"></a>
 
 ## 4. Appendix B: additional figures.
 
@@ -469,7 +469,7 @@ These are a few examples of code chunks options to change settings of figures. Y
 
 Let's move on to the third and last appendix type in this tutorial.
 
-<a name="section6"></a>
+<a name="section5"></a>
 
 ## 5. Appendix C: code.
 
@@ -503,10 +503,10 @@ If you want to check that you have correctly completed this tutorial, have a loo
   </body>
 
 
-I have one last trick to show you.
+...There is one last trick to show you.
 
 
-<a name="section7"></a>
+<a name="section6"></a>
 
 ## 6. Insert the Appendix in the main text.
 
@@ -534,7 +534,7 @@ If you knit the 'mock_dissertation.Rmd' file now, you can see the content from t
 
 *You have successfully completed this tutorial!*
 
-<a name="section8"></a>
+<a name="section7"></a>
 
 ## 7. Try it yourself!
 
