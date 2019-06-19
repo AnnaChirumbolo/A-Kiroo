@@ -77,7 +77,7 @@ Create a new `R Markdown` file. Give it an informative title, such as 'Appendice
 
 Have a look at the new file. It presents already some information in the **YAML header** (title and output type) and it also give some basic information on **Markdown syntax** and how to **include plots**. If you're interested give it a read, but delete everything afterwards **except the YAML header**, as we're not going to use that information for the tutorial.
 
-<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/59755843-ecf1fc00-9288-11e9-89ee-58d08c2e9e45.png"/></div>
+<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/59757148-67bc1680-928b-11e9-94b0-bcc6a1341d99.png"/></div>
 
 If it has not been written already, make sure you add your name as author and date within the YAML header, by adding 'Author:' and 'Date:' on separate lines.
 You can specify as many functions within the <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf" target="____blank">YAML header</a> as you find necessary, but we're just going to leave it basic for this tutorial.
