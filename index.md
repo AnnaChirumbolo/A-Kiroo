@@ -408,6 +408,21 @@ meant_plot    # calls the object graph for the mean temperatures
 This is the result in the pdf output. If you knit the document you can check it out:
 <div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/49430352-b3511c00-f7a2-11e8-8e05-f74b9fbb7607.png" /></div>
 
+*Do you notice anything odd?* The figures in the pdf are **not** in the right order! This happens if the order is not specified in `R Markdown`. You can use the function `hook()` from the `knitr` package that can solve this issue. To make sure it applies to the plots throughout the document, go back to the top of the file and paste the following chunk underneath the YAML header:
+
+~~~~
+```{r include = F}
+knitr::knit_hooks$set(plot = function(x, options)  {
+  hook_plot_tex(x, options)   # the function hook() is used to hold a certain object in place (plots in this case!)
+})
+```
+~~~~
+<sub> Credits to <a href="https://stackoverflow.com/questions/16626462/figure-position-in-markdown-when-converting-to-pdf-with-knitr-and-pandoc" target="____blank">Martin Schmelzer</a>.</sub>
+
+This function allows to set a new option in the code chunks with the figures: `fig.pos="H"`. This does the trick in holding the figure in the right order. Let's go back to the chunks in Appendix B and add `fig.pos="H"`in each. Knit again: you'll see the order has been fixed.
+
+<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/59758532-68a27780-928e-11e9-8285-ab43ad9bf19e.png" /></div>
+
 Code chunks can be used also to insert external figures, that had been saved from another file.
 In this case it is harder to manipulate  their dimensions - the font of the labels cannot be easily changed and there is the risk that the plot text becomes illegible. You can attempt changing the figure size as in the previous chunk, and see what happens.
 
@@ -447,21 +462,6 @@ This is the result:
 <div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/49431134-a33a3c00-f7a4-11e8-9bd4-f0b29f090c40.png" /></div>
 
 The figures do occupy an entire page, but at least their labels are visible.
-
-*Do you notice anything odd?* The figures in the pdf are **not** in the right order! This happens if the order is not specified in `R Markdown`. You can use the function `hook()` from the `knitr` package that can solve this issue. To make sure it applies to the plots throughout the document, go back to the top of the file and paste the following chunk underneath the YAML header:
-
-~~~~
-```{r}
-knitr::knit_hooks$set(plot = function(x, options)  {
-  hook_plot_tex(x, options)   # the function hook() is used to hold a certain object in place (plots in this case!)
-})
-```
-~~~~
-<sub> Credits to <a href="https://stackoverflow.com/questions/16626462/figure-position-in-markdown-when-converting-to-pdf-with-knitr-and-pandoc" target="____blank">Martin Schmelzer</a>.</sub>
-
-This function allows to set a new option in the code chunks with the figures: `fig.pos="H"`. This does the trick in holding the figure in the right order. Let's go back to the chunks in Appendix B and add `fig.pos="H"`in each. Knit again: you'll see the order has been fixed.
-
-INSERT SS3
 
 These are a few examples of code chunks options to change settings of figures. You can check this <a href="https://yihui.name/knitr/options/" target="____blank">blog post</a> by **Yihui Xie** to find more about the *chunk options* available.
 
