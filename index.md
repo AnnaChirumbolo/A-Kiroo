@@ -56,9 +56,7 @@ To get started, download this <a href="https://github.com/AnnaChirumbolo/tutoria
 ## 2. Create the appendix sections using LaTex syntax.
 
 
-> **_NOTE: LaTex vs. other markup languages_**
->
->*Why LaTex and not another markup language?*
+> **_NOTE:** *Why LaTex and not another markup language?*
 >
 > ...you might be asking yourself.
 >
