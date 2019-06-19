@@ -500,7 +500,7 @@ If you want to check that you have correctly completed this tutorial, have a loo
 
 </head>
   <body style="width:100%; height:100%; margin:0;">
-    <iframe src="https://docs.google.com/gview?url= https://github.com/AnnaChirumbolo/tutorial_repo/raw/master/appendix.pdf &embedded=true" style="width:100%; height:100%;" frameborder="0"></iframe>
+    <iframe src="https://github.com/AnnaChirumbolo/tutorial_repo/raw/master/appendix.pdf &embedded=true" style="width:100%; height:100%;" frameborder="0"></iframe>
   </body>
 </html>
 
