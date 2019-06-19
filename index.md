@@ -120,8 +120,12 @@ To write the headings in <a href="https://www.latex-project.org/about/" target="
 
 *Note: the writing is in American English. It won't work if you write in British English (i.e. "centre").*
 
+The knitted pdf document should look like this:
+<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/59756505-25dea080-928a-11e9-8b42-cd907e456578.png"/></div>
 
-> **_NOTE: The choice of syntax depends on the output - practical example_**
+
+> **_TEXT BOX:
+  The choice of syntax depends on the output - practical example_**
 >
 >Markdown <a href="https://stackoverflow.com/questions/14051715/markdown-native-text-alignment" target="____blank"> **doesn't support text alignment** </a> and would require either <a href="https://www.w3schools.com/html/default.asp" target="____blank">*html*</a> or <a href="https://www.w3schools.com/css/default.asp" target="____blank">*CSS*</a> support. However, in our case and with our formatting aims, none of these languages are applicable when the desired output is a pdf document. **Only LaTex provides the desired format.**
 >You can try format the same headings as before, this time using *html*.
