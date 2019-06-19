@@ -466,7 +466,7 @@ Making the code used available in an appendix favours the **transparency and rep
 
 There is a very simple, single line of code to insert within the chunk `{}`, that reads all the code used from a specified document, joins it and inserts it within the same chunk. This operation can be done assuming that the text itself was created from an `R Markdown` document and therefore contains code.
 
-<sub>This idea is credited to <a href="https://twitter.com/alexpghayes/status/1039170310560464897" target="____blank">Alex Hayes</a>:<\sub>
+<sub>This idea is credited to <a href="https://twitter.com/alexpghayes/status/1039170310560464897" target="____blank">Alex Hayes</a>:</sub>
 
 Insert the following code chunk at the bottom of the markdown file, after the last `\end{center}`.
 ~~~~
