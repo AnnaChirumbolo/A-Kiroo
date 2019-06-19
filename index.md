@@ -245,7 +245,7 @@ You can notice that the table has now appeared after the chunk and in the 'Viewe
 
 <div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/59758018-478d5700-928d-11e9-9dbd-e45e1b65b9d5.png"/></div>
 
-This is what it looks like when you knit the `.md` into `pdf` document:
+This is what it looks like when you knit the `.md` into `pdf document:
 
 <div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/49406535-c1288200-f74d-11e8-96e2-3a3214342b9c.png"/></div>
 
