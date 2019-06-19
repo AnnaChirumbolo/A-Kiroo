@@ -164,7 +164,9 @@ Leave both outputs side by side: as you can see, the result is practically ident
 However, if you look at the pdf, there are duplicates of the headings that are not properly formatted. That is the input written in html syntax that the pdf cannot read.
 >
 >On the other hand, if you look at the HTML it's the LaTex syntax that disappears. In fact, if you temporarily delete the text written in LaTex and re-knit the HTML file, you'll notice that the output hasn't changed.
->
+
+<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/59756909-f5e3cd00-928a-11e9-8c9a-a0a2b8eee10f.png"/></div>
+
 >To summarise on this point, the syntax changes *depending on the desired output format*. So bare this in mind when you want to write your document!
 >
 >You can delete the html text in order to move forward with the tutorial.
