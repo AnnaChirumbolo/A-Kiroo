@@ -184,6 +184,8 @@ At this stage the headings are just listed one after the other and only separate
 ```
 instead of the dashed lines between the headings. If you knit again, you're going to see that each heading successfully starts on a different page (and each page is already numbered!).
 
+<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/59757783-ca61e200-928c-11e9-8ff7-0a0d9d16345e.png"/></div>
+
 Once this has been set up, you can start creating the different types of appendices.
 
 <a name="section3"></a>
