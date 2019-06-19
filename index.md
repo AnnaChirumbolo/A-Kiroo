@@ -468,7 +468,7 @@ There is a very simple, single line of code to insert within the chunk `{}`, tha
 
 <sub>This idea is credited to <a href="https://twitter.com/alexpghayes/status/1039170310560464897" target="____blank">Alex Hayes</a>:<\sub>
 
-Insert the following code chunk at the bottom of the markdown file, after the last `\end{center}`. 
+Insert the following code chunk at the bottom of the markdown file, after the last `\end{center}`.
 ~~~~
 ```{r code=readLines(knitr::purl('./mock_dissertation.Rmd', documentation = 0)), eval = F}
 ```
@@ -498,7 +498,7 @@ The 'mock_dissertation.pdf' document in the repository is only missing the appen
 
 To add the content from the 'appendix.Rmd' into 'mock_dissertation.Rmd', go to the 'Appendix' section at the end of the main one and insert the following code chunk:
 ~~~~
-```{r child='appendix.Rmd'
+```{r child='appendix.Rmd'}
 ```
 ~~~~
 
@@ -533,4 +533,4 @@ Useful links:
 
 [^3]: If you would like to learn more about `LaTex` syntax and how to apply it for building up your thesis, check this series of <a href="https://rosannavanhespenresearch.wordpress.com/2016/02/03/writing-your-thesis-with-r-markdown-1-getting-started/" target="____blank">blog posts</a> by **Rosanna van Hespen**. The GitHub Repository for these posts can be found <a href="https://github.com/rosannav/thesis_in_rmarkdown/tree/master/example_thesis" target="____blank">here</a>. At <a href="https://www.latex-project.org" target="____blank">LaTex project</a> website you can find more about syntax and documentation.
 
-[^4]: This <a href="https://cran.r-project.org/web/packages/viridisLite/viridisLite.pdf" target="____blank">link</a> will send you to the *viridisLite* package and this <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html" target="____blank">tutorial</a> explores more about its applications with `kableExtra`.
+[^4]: This <a href="https://cran.r-project.org/web/packages/viridisLite/viridisLite.pdf" target="____blank">link</a> will send you to the *viridisLite* package handbook and this <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html" target="____blank">tutorial</a> explores more about its applications with `kableExtra`.
