@@ -75,9 +75,11 @@ First thing in the agenda - open `Rstudio`! Once you've done that open the tutor
 
 Create a new `R Markdown` file. Give it an informative title, such as 'Appendices document in Markdown', and change the 'Default Output Format' to PDF. You can read in brackets that the pdf requires <a href="https://miktex.org/howto/install-miktex" target="____blank">MikTex</a> for Windows,  <a href="http://www.tug.org/mactex/" target="____blank">MacTex </a> for Mac or <a href="https://www.tug.org/texlive/" target="____blank">Tex Live</a> for Linux.
 
-Have a look at the new file. It presents already some information in the **YAML header** (title and output type) and it also give some basic information on **Markdown syntax** and how to **include plots**. If you're interested give it a read, but delete everything afterwards **except the YAML header**, as we're not going to use that information for the tutorial.
+Have a look at the new file. It presents already some information in the **YAML header** (title and output type) and it also give some basic information on **Markdown syntax** and how to **include plots**.
 
 <div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/59757148-67bc1680-928b-11e9-94b0-bcc6a1341d99.png"/></div>
+
+If you're interested give it a read, but delete everything afterwards **except the YAML header**, as we're not going to use that information for the tutorial.
 
 If it has not been written already, make sure you add your name as author and date within the YAML header, by adding 'Author:' and 'Date:' on separate lines.
 You can specify as many functions within the <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf" target="____blank">YAML header</a> as you find necessary, but we're just going to leave it basic for this tutorial.
@@ -121,7 +123,7 @@ To write the headings in <a href="https://www.latex-project.org/about/" target="
 *Note: the writing is in American English. It won't work if you write in British English (i.e. "centre").*
 
 The knitted pdf document should look like this:
-<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/59756505-25dea080-928a-11e9-8b42-cd907e456578.png"/></div>
+<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/59757281-bb2e6480-928b-11e9-869c-81e786eda12c.png"/></div>
 
 
 > **_TEXT BOX:
