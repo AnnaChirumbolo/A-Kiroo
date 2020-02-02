@@ -1,9 +1,5 @@
 <center><img src="{{ site.baseurl }}/tutheaderbl.png" alt="Img"></center>
 
-<p align="center">
-  <b><font size="5">R Markdown pt. II tutorial: how to create an Appendix document.</font></b>
-</p>
-
 <sub>By _**Anna**_, last edited on _**June 18**_, 2019
 
 ### Tutorial Aims
