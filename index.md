@@ -18,9 +18,11 @@
 
 #### <a href="#section1"> 1. The appendix document.</a>
 #### <a href="#section2"> 2. Create the appendix sections using `LaTex` syntax.</a>
-  <a href="#subsect1"><sub> (a) Write headings and titles </sub></a>
+  <a href="#subsect1"><sub> (a) Why LaTex and not another markup language? </sub></a>
 
-  <a href="#subsect2"><sub> (b) Place the appendices in distinct pages </sub></a>
+  <a href="#subsect1"><sub> (b) Write headings and titles </sub></a>
+
+  <a href="#subsect2"><sub> (c) Place the appendices in distinct pages </sub></a>
 
 #### <a href="#section3"> 3. Appendix A: tables of raw data.</a>
 #### <a href="#section4"> 4. Appendix B: additional figures.</a>
@@ -54,18 +56,16 @@ To get started, download this <a href="https://github.com/AnnaChirumbolo/tutoria
 ## 2. Create the appendix sections using LaTex syntax.
 
 
-> **_NOTE:** *Why LaTex and not another markup language?*
->
-> ...you might be asking yourself.
->
-> `LaTex` is a "high quality typesetting system" used to produce technical and scientific documentation. It is based on the idea that "it's better to leave document design to document designers, and to let authors get on with writing documents".[^3]
->
->I know, this syntax structure is less appealing than other markup languages (i.e. Markdown, html). Markdown is indeed a better option to focus on contents and format a document easily. That is because markdown has been created with the purpose of being a very *lightweight* markup language, therefore providing a simple code to write in simple format.
+### a) Why LaTex and not another markup language?
+
+`LaTex` is a "high quality typesetting system" used to produce technical and scientific documentation. It is based on the idea that "it's better to leave document design to document designers, and to let authors get on with writing documents".[^3]
+
+This syntax structure is less appealing than other markup languages (i.e. Markdown, html). Markdown is indeed a better option to focus on contents and format a document easily. That is because markdown has been created with the purpose of being a very *lightweight* markup language, therefore providing a simple code to write in simple format.
 LaTex has a longer learning curve and it is not as handy to use, however it is a much more powerful tool that allows high customisation and high control of your documents, for inserting multiple sections, cross-referencing, adding tables, figures and drawing (diagrams, statistical graphs, chemical formulas, etc.).
 
 <a name="subsect1"></a>
 
-### a) Write headings and titles
+### b) Write headings and titles
 
 First thing in the agenda - open `Rstudio`! Once you've done that open the tutorial folder that you have downloaded by clicking on 'Project:(none)' on the upper right and selecting Open Project > tutorial_repo-master. This will set the working directory to the tutorial folder.
 
