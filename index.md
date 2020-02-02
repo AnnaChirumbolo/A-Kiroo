@@ -282,7 +282,7 @@ puffins_t %>%
 <center><img src="{{ site.baseurl }}/prep/screenshots/table3.png" alt="Img"></center>
 
 
-As a last example, let's subgroup the table by applying a common heading to the columns that concern puffins and one for the columns that concern temperature. Let's also subgroup the rows by centuries in which the data have been collected: 1970s and 1980s.
+As a last example, let's subgroup the table by applying a common heading to the columns that concern puffins and one for the columns that concern temperature. Let's also subgroup the rows by centuries in which the data have been collected: 1970s and 1980s. The new table will likely appear in a new page.
 
 ~~~~
 ```{r echo=F}
