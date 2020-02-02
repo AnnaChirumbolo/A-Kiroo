@@ -299,7 +299,7 @@ puffins_t %>%
 ```
 ~~~~
 
-<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/49405764-55451a00-f74b-11e8-8b60-87f62010ef35.png" /></div>
+<center><img src="{{ site.baseurl }}/prep/screenshots/table4.png" alt="Img"></center>
 
 **NOTE: The the tables that you can see in R are the in an HTML output. The tables in the pdf have a different appearance. Keep this in mind when you set the table features and knit the `R Markdown` every now and then to check on the actual result.**
 
