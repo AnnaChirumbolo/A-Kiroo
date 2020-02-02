@@ -497,11 +497,7 @@ If you want to check that the code is actually the same as the one that produces
 
 __*Great job getting so far!*__
 If you want to check that you have correctly completed this tutorial, have a look at the completed appendix.pdf file that you can find HERE(LINK).
-
-  <body style="width:100%; height:100%; margin:0;">
-    <iframe src="https://docs.google.com/gview?url= https://github.com/AnnaChirumbolo/tutorial_repo/raw/master/appendix.pdf &embedded=true" style="width:100%; height:100%;" frameborder="0"></iframe>
-  </body>
-
+<a href="https://cran.r-project.org/web/packages/kableExtra/kableExtra.pdf" target="____blank">manual</a>.TO FIX
 
 ...There is one last trick to show you.
 
