@@ -172,7 +172,7 @@ However, if you look at the pdf, there are duplicates of the headings that are n
 
 <a name="subsect3"></a>
 
-### b) Place the appendices in distinct pages
+### c) Place the appendices in distinct pages
 
 At this stage the headings are just listed one after the other and only separated by continuous lines (see the pdf output). To actually separate them into distinct pages write (in *LaTex*)
 
