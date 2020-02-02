@@ -244,7 +244,7 @@ You can notice that the table has now appeared after the chunk and in the 'Viewe
 
 This is what it looks like when you knit the `.md` into `pdf` document:
 
-<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/49406535-c1288200-f74d-11e8-96e2-3a3214342b9c.png"/></div>
+<center><img src="{{ site.baseurl }}/prep/screenshots/table1.png" alt="Img"></center>
 
 
 The table right now is looking quite basic. With `kableExtra` it is possible to customise the tables way further:
