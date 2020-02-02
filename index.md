@@ -301,7 +301,7 @@ puffins_t %>%
 
 <center><img src="{{ site.baseurl }}/prep/screenshots/table4.png" alt="Img"></center>
 
-**NOTE: The the tables that you can see in R are the in an HTML output. The tables in the pdf have a different appearance. Keep this in mind when you set the table features and knit the `R Markdown` every now and then to check on the actual result.**
+**NOTE: The the tables that you can see in R environment are the in an HTML output. The tables in the pdf have a different appearance. Keep this in mind when you set the table features and knit the `R Markdown` every now and then to check on the actual result.**
 
 `kableExtra` has a really high variety of features for creating tables and it is often combined with another package called `viridisLite` for using smoother <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html" target="____blank">colour scales</a>. If you are interested in finding out more about the resources of the package, have a look at its <a href="https://cran.r-project.org/web/packages/kableExtra/kableExtra.pdf" target="____blank">manual</a>.[^4]
 
@@ -327,7 +327,7 @@ library(ggplot2) # to make beautiful graphs
 ```
 ~~~~
 
-The next code transforms the data and creates the graph of climate trends from 1979 until 2008.
+The next code chunk transforms the data and creates the graph of climate trends from 1979 until 2008.
 
 <sub> *WAIT to run the graphs to visualise the results. You'll figure out why, just read on. ;)* </sub>
 
@@ -359,7 +359,7 @@ climate_plot <- ggplot(climate_data) +
 ```
 ~~~~
 
-This code produces the mean max and min temperatures during that same period.
+This code chunk produces the mean max and min temperatures during that same period.
 
 ~~~~
 ```{r echo=F}
@@ -408,7 +408,8 @@ meant_plot    # calls the object graph for the mean temperatures
 
 
 This is the result in the pdf output. If you knit the document you can check it out:
-<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/49430352-b3511c00-f7a2-11e8-8e05-f74b9fbb7607.png" /></div>
+<center><img src="{{ site.baseurl }}/prep/screenshots/app-fig1.png" alt="Img"></center>
+
 
 *Do you notice anything odd?* The figures in the pdf are **not** in the right order! This happens if the order is not specified in `R Markdown`. You can use the function `hook()` from the `knitr` package that can solve this issue. To make sure it applies to the plots throughout the document, go back to the top of the file and paste the following chunk underneath the YAML header:
 
