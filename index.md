@@ -1,4 +1,4 @@
-<center><img src="{{ site.baseurl }}/tutheaderbl.png" alt="Img"></center>
+<center><img src="{{ site.baseurl }}/prep/tutheaderbl.png" alt="Img"></center>
 
 <sub>By _**Anna**_, last edited on _**June 18**_, 2019
 
