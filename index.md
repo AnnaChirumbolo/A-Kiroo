@@ -18,7 +18,7 @@
 
 #### <a href="#section1"> 1. The appendix document.</a>
 #### <a href="#section2"> 2. Create the appendix sections using `LaTex` syntax.</a>
-  <a href="#subsect1"><sub> (a) Why LaTex and not another markup language? <sub></a>
+  <a href="#subsect2"><sub> (a) Why LaTex and not another markup language? </sub></a>
 
   <a href="#subsect2"><sub> (b) Write headings and titles </sub></a>
 
@@ -68,7 +68,7 @@ LaTex has a longer learning curve and it is not as handy to use, however it is a
 
 ### b) Write headings and titles
 
-First thing in the agenda - open `Rstudio`! Once you've done that open the tutorial folder that you have downloaded by clicking on 'Project:(none)' on the upper right and selecting Open Project > tutorial_repo-master. This will set the working directory to the tutorial folder.
+First thing in the agenda - open `Rstudio`! Once you've done that open the tutorial folder that you have downloaded by clicking on 'Project:(none)' on the upper right and selecting Open Project > Coding-Club-Markdown-pt.II. This will set the working directory to the tutorial folder.
 
 Create a new `R Markdown` file. Give it an informative title, such as 'Appendices document in Markdown', and change the 'Default Output Format' to PDF. You can read in brackets that the pdf requires <a href="https://miktex.org/howto/install-miktex" target="____blank">MikTex</a> for Windows,  <a href="http://www.tug.org/mactex/" target="____blank">MacTex </a> for Mac or <a href="https://www.tug.org/texlive/" target="____blank">Tex Live</a> for Linux.
 
