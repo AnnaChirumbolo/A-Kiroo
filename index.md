@@ -263,7 +263,8 @@ puffins_t %>%
 ```
 ~~~~
 
-<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/49405752-4b231b80-f74b-11e8-9c84-1bf1e0f395aa.png" /></div>
+<center><img src="{{ site.baseurl }}/prep/screenshots/table2.png" alt="Img"></center>
+
 
 It is also possible to specify the features of rows with `row_spec()`. Let's make the headings bold and increase their font size.
 
@@ -278,7 +279,8 @@ puffins_t %>%
 ```
 ~~~~
 
-<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/49405745-40688680-f74b-11e8-8861-2ce219f94aac.png" /></div>
+<center><img src="{{ site.baseurl }}/prep/screenshots/table3.png" alt="Img"></center>
+
 
 As a last example, let's subgroup the table by applying a common heading to the columns that concern puffins and one for the columns that concern temperature. Let's also subgroup the rows by centuries in which the data have been collected: 1970s and 1980s.
 
@@ -291,8 +293,9 @@ puffins_t %>%
                 position = "center", font_size = 10) %>%
   add_header_above(c(" ", "EU puffins" = 3, "Mean Temperatue (°C)" = 2), bold=T) %>% # this adds one header the columns 2-3-4,  
                                                                                       # and one for the columns 5-6.
-  group_rows("1970s", 1,2) %>% # the first two rows are grouped as 1970s
-  group_rows("1980s", 3,10) # the remaining rows are grouped as 1980s
+  kableExtra::group_rows("1970s", 1,2) %>% # the first two rows are grouped as 1970s
+  kableExtra::group_rows("1980s", 3,10) # the remaining rows are grouped as 1980s
+      # better specify the package kableExtra before group_rows(), otherwise dyplr might have masked it (there is a function under dyplr with the same name)
 ```
 ~~~~
 
