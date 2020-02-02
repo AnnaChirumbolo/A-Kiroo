@@ -1,6 +1,6 @@
 <center><img src="{{ site.baseurl }}/prep/tutheaderbl.png" alt="Img"></center>
 
-<sub>By _**Anna**_, last edited on _**June 18**_, 2019
+<sub>By _**Anna**_, last edited on _**February 2nd**_, 2020
 
 ### Tutorial Aims
 
