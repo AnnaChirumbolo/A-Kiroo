@@ -20,7 +20,7 @@ Repository structure:
   <b><font size="5">"How to create an Appendix document in R Markdown."</font></b>
 </p>
 
-You can move to the [webpage](https://eddatascienceees.github.io/tutorial-assignment-AnnaChirumbolo/) to complete this tutorial. 
+You can move to the [webpage](https://annachirumbolo.github.io/Coding-Club-Markdown-pt.II/#subsect1) to complete this tutorial. 
 
 If you have any questions about the tutorial, feel free to contact me:
 
