@@ -450,23 +450,6 @@ This is the result:
 
 The figures do occupy an entire page, but at least their labels are visible.
 
-*Do you notice anything odd?* The figures in the pdf are **not** in the right order! This happens if the order is not specified in `R Markdown`. You can use the function `hook()` from the `knitr` package that can solve this issue. To make sure it applies to the plots throughout the document, go back to the top of the file and paste the following chunk underneath the YAML header:
-
-~~~~
-```{r include = F}
-knitr::knit_hooks$set(plot = function(x, options)  {
-  hook_plot_tex(x, options)   # the function hook() is used to hold a certain object in place (plots in this case!)
-})
-```
-~~~~
-<sub> Credits to <a href="https://stackoverflow.com/questions/16626462/figure-position-in-markdown-when-converting-to-pdf-with-knitr-and-pandoc" target="____blank">Martin Schmelzer</a>.</sub>
-
-This function allows to set a new option in the code chunks with the figures: `fig.pos="H"`. This does the trick in holding the figure in the right order. Let's go back to the chunks in Appendix B and add `fig.pos="H"`in each. Knit again: you'll see the order has been fixed.
-
-<div style="text-align:center"><img src ="https://user-images.githubusercontent.com/43357858/59758532-68a27780-928e-11e9-8285-ab43ad9bf19e.png" /></div>
-
-These are a few examples of code chunks options to change settings of figures. You can check this <a href="https://yihui.name/knitr/options/" target="____blank">blog post</a> by **Yihui Xie** to find more about the *chunk options* available.
-
 Let's move on to the third and last appendix type in this tutorial.
 
 <a name="section5"></a>
