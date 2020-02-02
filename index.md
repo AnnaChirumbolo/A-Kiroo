@@ -18,7 +18,7 @@
 
 #### <a href="#section1"> 1. The appendix document.</a>
 #### <a href="#section2"> 2. Create the appendix sections using `LaTex` syntax.</a>
-  <a href="#subsect1"><sub> (a) Why LaTex and not another markup language? </sub></a>
+  <a href="#subsect1"><sub> (a) Why LaTex and not another markup language? <sub></a>
 
   <a href="#subsect2"><sub> (b) Write headings and titles </sub></a>
 
