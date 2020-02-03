@@ -200,7 +200,7 @@ If you have a look at the data set, the column names are not very nice to put in
 Insert the following code chunk after the first heading and title, but before the `\newpage`.
 
 ~~~~
-```{r include = F}
+```{r setup and tidy, include = F}
 library(knitr)  # for dynamic report generation
 library(kableExtra) # to build complex HTML or 'LaTex' tables
 library(tidyverse) # for data manipulation
@@ -227,13 +227,13 @@ Now, the data set is almost presentable and ready to be inserted in a table. The
 Copy the following code chunk and run it. Make sure the two chunks are spaced between each other.
 
 ~~~~
-```{r echo=F}
+```{r table1, echo=F}
 puffins_t %>%
   slice(1:10) %>%   # the table is going to show only the first 10 lines (a sample of the data set)
   kable(digits = 2) %>% # each value has 2 decimal digits
   kable_styling(full_width = F, # the width of the table is not fit to the width of the page
                 position = "center", font_size = 10)  # table settings with the kableExtra package
-```				
+```			
 ~~~~
 
 You can notice that the table has now appeared after the chunk and in the 'Viewer' tab on the bottom-right panel.
@@ -250,14 +250,18 @@ The table right now is looking quite basic. With `kableExtra` it is possible to 
 Let's highlight the third column 'Population Trend' and colour it in red, perhaps because we want the reader to focus on those values. Let's also highlight the set of columns with temperature values and colour them in green.
 
 ~~~~
-```{r echo=F}
+```{r table2, echo=F}
+library(viridisLite) # package for a variety of colour scales
+
 puffins_t %>%
   slice(1:10) %>%
-  kable(digits = 2) %>%
+  kable(digits = 2)  %>%
   kable_styling(full_width = F,
                 position = "center", font_size = 10) %>%
   column_spec(3, color = "red", bold = T)  %>% # one column
-  column_spec(5:6, color = "green", bold = T) # set of columns
+  column_spec(5:6, color =  spec_color(1:10, end = 0.7, option = "D"),
+              bold = T) # set of columns
+                        # spec_color is a kableExtra function that uses viridisLite colour palettes. This is just an example of how you can set the colour you want from the ones offered by the package.
 ```
 ~~~~
 
@@ -267,7 +271,7 @@ puffins_t %>%
 It is also possible to specify the features of rows with `row_spec()`. Let's make the headings bold and increase their font size.
 
 ~~~~
-```{r echo=F}
+```{r table3, echo=F}
 puffins_t %>%
   slice(1:10) %>%
   kable(digits = 2) %>%
@@ -283,17 +287,19 @@ puffins_t %>%
 As a last example, let's subgroup the table by applying a common heading to the columns that concern puffins and one for the columns that concern temperature. Let's also subgroup the rows by centuries in which the data have been collected: 1970s and 1980s. The new table will likely appear in a new page.
 
 ~~~~
-```{r echo=F}
+```{r table4, echo=F}
 puffins_t %>%
   slice(1:10) %>%
   kable(digits = 2) %>%
   kable_styling(full_width = F,
                 position = "center", font_size = 10) %>%
-  add_header_above(c(" ", "EU puffins" = 3, "Mean Temperatue (°C)" = 2), bold=T) %>% # this adds one header the columns 2-3-4,  
-                                                                                      # and one for the columns 5-6.
+  add_header_above(c(" ", "EU puffins" = 3, "Mean Temperatue (°C)" = 2),
+                   bold=T) %>% # this adds one header the columns 2-3-4,  
+                              # and one for the columns 5-6.
   kableExtra::group_rows("1970s", 1,2) %>% # the first two rows are grouped as 1970s
   kableExtra::group_rows("1980s", 3,10) # the remaining rows are grouped as 1980s
-      # better specify the package kableExtra before group_rows(), otherwise dyplr might have masked it (there is a function under dyplr with the same name)
+
+  # NOTE: better specify the package kableExtra before group_rows(), otherwise dyplr might have masked it (there is a function under dyplr with the same name)
 ```
 ~~~~
 
@@ -320,7 +326,7 @@ Let's imagine we want to add more explanatory figures in the appendix, for examp
 Move under the second heading ('Appendix B') and paste the following code chunk to install `ggplot2` package.
 
 ~~~~
-```{r include=F}
+```{r open ggplot, include=F}
 library(ggplot2) # to make beautiful graphs
 ```
 ~~~~
@@ -330,7 +336,7 @@ The next code chunk transforms the data and creates the graph of climate trends 
 <sub> *WAIT to run the graphs to visualise the results. You'll figure out why, just read on. ;)* </sub>
 
 ~~~~
-```{r echo= F}
+```{r climate data, echo= F}
 climate_data <- read.csv("./data/Lerwick_temp_data.csv") # opens raw data set 'Lerwick_temp_data.csv'
 
 # filter climate data only during years 1979-2008 with filter()
@@ -360,7 +366,7 @@ climate_plot <- ggplot(climate_data) +
 This code chunk produces the mean max and min temperatures during that same period.
 
 ~~~~
-```{r echo=F}
+```{r mean temperature, echo=F}
 mean_t_data <- climate_data %>%
   group_by(year) %>%  
   summarise(mean_tmax = mean(tmax),  
@@ -392,7 +398,7 @@ By running these code chunks you won't see any outputs. That is because the grap
 Paste the following code chunk:
 
 ~~~~
-```{r echo=F, out.width='.50\\linewidth', fig.width=10, fig.height=8, fig.show='hold', fig.cap="The figures are created directly in this .Rmd file."}
+```{r coded plots, echo=F, out.width='.50\\linewidth', fig.width=10, fig.height=8, fig.show='hold', fig.cap="The figures are created directly in this .Rmd file."}
 climate_plot  # calls the object graph for climate trend
 meant_plot    # calls the object graph for the mean temperatures
 ```
@@ -412,7 +418,7 @@ Code chunks can be used also to insert external figures, that had been saved fro
 In this case it is harder to manipulate  their dimensions - the font of the labels cannot be easily changed and there is the risk that the plot text becomes illegible. You can attempt changing the figure size as in the previous chunk, and see what happens.
 
 ~~~~
-```{r, echo = TRUE, out.width='.50\\linewidth', fig.width=10, fig.height=8, fig.show='hold', fig.align='center', fig.cap="This is an attempt to set the size of externally located figures. The settings don't work as well as in the example above. The labels are very small and illegible."}
+```{r path-to-folder plots, echo = TRUE, out.width='.50\\linewidth', fig.width=10, fig.height=8, fig.show='hold', fig.align='center', fig.cap="This is an attempt to set the size of externally located figures. The settings don't work as well as in the example above. The labels are very small and illegible."}
 img_appendix<-list.files("appendix_fig/", pattern = ".png", full.names = TRUE)  # opens the files within the folder called 'appendix_fig'
 include_graphics(img_appendix) # views the graphs within that folder
 ```
@@ -427,7 +433,7 @@ Change the values of `fig.height` and `fig.width` and knit the `.Rmd` file to te
 When images are loaded from an external source it is advised not to align them, but to have them bigger and following one another.
 
 ~~~~
-```{r, echo = TRUE, out.height="40%", fig.show='hold', fig.align="center",  fig.cap="Additional images in Appendix B"}
+```{r path-to-folder plots fixed size, echo = TRUE, out.height="40%", fig.show='hold', fig.align="center",  fig.cap="Additional images in Appendix B"}
 img_appendix<-list.files("appendix_fig/", pattern = ".png", full.names = TRUE)
 include_graphics(img_appendix)
 ```
@@ -493,7 +499,7 @@ The 'mock_dissertation.pdf' document in the repository is only missing the appen
 
 To add the content from the 'appendix.Rmd' into 'mock_dissertation.Rmd', go to the 'Appendix' section at the end of the main one and insert the following code chunk:
 ~~~~
-```{r child='appendix.Rmd'}
+```{r add main_doc code, child='appendix.Rmd'}
 ```
 ~~~~
 
