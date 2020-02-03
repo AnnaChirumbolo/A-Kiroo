@@ -193,38 +193,36 @@ One type of appendix could contain tables of the raw data collected, so that rea
 
 In this case we are going to create a table of a sample data set in Appendix A.
 
-Insert a code chunk after the first heading and title, but before the `\newpage`, to install `knitr` and `kableExtra` packages.
+You'll need to download and open three packages: `knitr`, `kableExtra` and `tidyverse`, useful for dynamic report generation, table generation and data tidying, respectively.
+The data set you are going to use is called 'puffins_temp.csv' - it contains information on population trends of Atlantic puffins (*Fratercula arctica*) surveyed in Norway, together with the average of maximum and minimum temperatures (°C) over the years 1979-2008.
+If you have a look at the data set, the column names are not very nice to put in a table. We use the function `rename()` to change them.
+
+Insert the following code chunk after the first heading and title, but before the `\newpage`.
 
 ~~~~
 ```{r include = F}
 library(knitr)  # for dynamic report generation
 library(kableExtra) # to build complex HTML or 'LaTex' tables
 library(tidyverse) # for data manipulation
+
+puffins_t <- read.csv("./data/puffins_temp.csv")
+                      # to open the file puffins_temp.csv
+
+puffins_t <- puffins_t %>%
+  rename("Year" = year, "Country list" = Country.list,
+         "Population trend" = pop_trend, "ID" = id,
+         "Mean max. T (°C)" = mean_tmax, "Mean min. T (°C)" = mean_tmin)  
+            # A bit of data transformation! "New name" = Old.name
 ```
 ~~~~
 
 *Note: `include=F` in the `{}` makes sure that neither code chunk nor output are shown in the pdf output.*
 
-Also the `tidyverse` package has to be loaded or installed (`install.packages()`) to do some data transformation. If you have never used the `tidyverse` package before don't worry - it is not part of the learning objectives for this tutorial. For now, just copy the code. If you want to learn about the Tidyverse, do this <a href="https://ourcodingclub.github.io/2017/03/20/seecc.html" target="____blank">Coding Club tutorial</a>.
+If you have never used the `tidyverse` package before don't worry - it is not part of the learning objectives for this tutorial. If you want to learn about the Tidyverse, do this <a href="https://ourcodingclub.github.io/2017/03/20/seecc.html" target="____blank">Coding Club tutorial</a>.
 
-The data set you are going to use is called 'puffins_temp.csv' - it contains information on population trends of Atlantic puffins (*Fratercula arctica*) surveyed in Norway, together with the average of maximum and minimum temperatures (°C) over the years 1979-2008.
+Now, the data set is almost presentable and ready to be inserted in a table. There are still other details, like number of decimals to be fixed, that `knitr::kable()` function helps fixing.
 
-Add this piece of code to the previous chunk and run it.
-
-```
-puffins_t <- read.csv("./data/puffins_temp.csv") # to open the file puffins_temp.csv
-```
-
-If you have a look at the data set, the column names are not very nice to put in a table. We use the function `rename()` to change them. This is where `Tidyverse` becomes extremely useful! Again, add this piece of code at the end of the same chunk and run it.
-
-```
-puffins_t <- puffins_t %>%
-  rename("Year" = year, "Country list" = Country.list, "Population trend" = pop_trend, "ID" = id, "Mean max. T (°C)" = mean_tmax, "Mean min. T (°C)" = mean_tmin)  # A bit of data transformation! "New name" = Old.name
-```
-
-Now the headings have much clearer and neater names. The data set is almost presentable and ready to be inserted in a table. There are still other details, like number of decimals to be fixed, that `knitr::kable()` function helps fixing.
-
-`kableExtra` is an additional package that uses `kable()` and *pipes* from the `Tidyverse` package to build very complex and professional tables. We can explore some of these combined packages to produce a table for a sample of the data set that we have just loaded.
+`kableExtra` is a package that uses `kable()` and *pipes* from the `Tidyverse` package to build very complex and professional tables. We can explore some of these combined packages to produce a table for a sample of the data set that we have just loaded.
 
 Copy the following code chunk and run it. Make sure the two chunks are spaced between each other.
 
